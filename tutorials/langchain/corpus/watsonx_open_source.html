@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us">
+<head>
+<!-- begin spin_special_output(head_start) -->
+<style type="text/css" wd_script_id="featureboxes_style" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">
+		.wd_featurebox_icon {
+			display: inline;
+		}
+		.wd_featurebox_icon img {
+			vertical-align: middle;
+		}
+		div.wd_featurebox_group div.wd_tabs_wrapper {
+			border: none;
+			border-bottom: 1px solid #E1E1E1;
+			padding: 0 0 5px 0;
+		}
+		div.wd_featurebox_group div.wd_featurebox {
+			border: none;
+			padding: 8px 0 0 0;
+		}
+		div.wd_featurebox_group li.wd_tab {
+			float: none;
+			color: #666666;
+		}
+		div.wd_featurebox_group li.wd_tab-active {
+			border: none;
+			background-color: transparent;
+			color: #000000;
+			font-weight: bold;
+		}
+		div.wd_featurebox_group li.wd_tab-inactive {
+			cursor: auto;
+		}
+	</style>
+<style type="text/css" wd_script_id="search_form_style" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">
+		.wd_search_form .wd_input_datepicker {
+			margin-right: 2px;
+		}
+		.wd_search_type_checkbox {
+			margin-left: 20px;
+		}
+		</style>
+<script type="text/javascript" src="js/jquery-webdriver.js" wd_script_id="jquery-webdriver.js" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ=="></script>
+<script type="text/javascript" src="js/webdriver.js" wd_script_id="webdriver.js" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ=="></script>
+<script type="text/javascript" wd_script_id="search_form_script" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">
+			function wd_toggle_search_form(link, advanced) {
+				var $ = webDriver.jQuery;
+				var $container = $(link).closest(".wd_search_form_container");
+				var basic_form = $container.find(".wd_search_form_basic");
+				var basic_query = basic_form.find('input[name="query"]');
+				var advanced_form = $container.find(".wd_search_form_advanced");
+				var advanced_query = advanced_form.find('input[name="query"]');
+
+				if (advanced) {
+					advanced_query.val(basic_query.val());
+					advanced_form.show();
+					basic_form.hide();
+				} else {
+					basic_query.val(advanced_query.val());
+					basic_form.show();
+					advanced_form.hide();
+				}
+			}
+
+			function wd_toggle_search_type_checkboxes(radio) {
+				var $ = webDriver.jQuery;
+				var $radio = $(radio);
+				var all = $radio.val() == "All" ? $radio.is(":checked") : !$radio.is(":checked");
+				var $checkboxes = $radio.closest(".wd_form_field").find(".wd_search_type_checkbox");
+				$checkboxes.find('input[type="checkbox"]').prop("disabled", all);
+				$checkboxes.toggle(!all);
+			}
+
+			webDriver.jQuery(function ($) {
+				$('.wd_search_type_radio input[type="radio"]').each(function() {wd_toggle_search_type_checkboxes(this);});
+			});
+		</script>
+<script type="text/javascript" wd_script_id="view_printable_script" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">
+	function view_printable() {
+		var loc = window.location;
+		var sep = (loc.search == "") ? "?" : "&";
+		var url = loc.protocol+"//"+loc.host+loc.pathname+loc.search+sep+"printable"+loc.hash;
+		window.open(url, "_blank", "");
+	}
+</script>
+<link href="thirdparty/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+<style type="text/css" wd_script_id="toolbar_style" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">
+			div.wd_toolbar {
+				border-top: 1px solid #cccccc;
+				border-bottom: 1px solid #cccccc;
+				margin: 15px 0px 15px 0px;
+				padding: 5px;
+				line-height: 1;
+			}
+			div.wd_toolbar-page {
+				clear: both;
+			}
+			div.wd_toolbar ul.wd_tools {
+				display: inline-block;
+				width: 100%;
+				margin: 0;
+				padding: 5px 0;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool {
+				display: block;
+				list-style-type: none;
+				margin-right: 5px;
+				padding: 0;
+				float: right;
+			}
+			span.wd_tool_icon > a:link,
+			span.wd_tool_icon > a:visited {
+				border-radius: 2px;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				box-sizing: border-box;
+				margin: 0;
+				padding: 7px;
+				font-size: 16px;
+				line-height: 1;
+				text-align: center;
+				color: #ffffff;
+				background-color: #767676;
+			} 
+			span.wd_tool_icon > a:hover {
+				color: #ffffff;
+				background-color: #666666;
+				text-decoration: none;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool-addthis {
+				float: left;
+			}
+		</style>
+<script type="text/javascript" src="js/wd_resize.js" wd_script_id="wd_resize.js" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ=="></script>
+<script type="text/javascript" wd_script_id="format_news_script" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">
+(function($) {
+	webDriver.formatNews = function() {
+		var $news = $(this);
+		var print_url = $news.attr("wd_print_url");
+		$news.find("table").each(function() {
+			var $table = $(this);
+			var $parent = $table.parent();
+			if ($parent.innerWidth() < $table.outerWidth()) {
+				if ($parent.hasClass("wd_news_table")) {
+					$parent.find(".fullscreen-button").show();
+				} else {
+					var $btn = $("<button>View News Release Full Screen</button>")
+						.addClass("fullscreen-button")
+						.on("click", function() {
+							if (print_url)
+								window.open(print_url, "_blank", "");
+							else
+								view_printable();
+						})
+					;
+
+					var $div = $("<div></div>)")
+						.addClass("wd_news_table")
+						.css("overflow-x", "auto")
+						.append($btn)
+					;
+
+					$table.replaceWith($div);
+					$div.append($table);
+				}
+			} else {
+				if ($parent.hasClass("wd_news_table"))
+					$parent.find(".fullscreen-button").hide();
+			}
+		});
+	}
+})(webDriver.jQuery);
+</script>
+<style type="text/css" wd_script_id="template_list_inline_style" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">
+						ul.wd_layout-inline {
+							display: inline-block;
+							list-style: none;
+							padding: 0;
+							margin: 0;
+						}
+						ul.wd_layout-inline li {
+							display: inline-block;
+							padding: 0;
+							margin: 0 0 0 1em;
+						}
+					</style>
+<style type="text/css" wd_script_id="template detail:newsfeed_releases:site style" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ==">.wd_title {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.wd_subtitle {
+	font-weight: bold;
+}
+table.wd_extimagetable {
+	border-style: none; 
+	border-spacing:0px;
+	clear: right; 
+	float: right; 
+}
+td.wd_extimagecell {
+	text-align: right; 
+	margin: 0px 0px 5px 5px;
+	padding:0px;
+}
+td.wd_extimagecell img {
+	padding-left:10px;
+	padding-bottom:10px;
+	border-style: none; 
+}
+blockquote.wd_pullquote {
+	font-style: italic;
+	width:200px;
+	margin:0 0 20px 20px;
+	line-height: 1.8em;
+	float: right;
+	clear: right;
+}
+blockquote.wd_pullquote:before {
+	content: "“ ";
+	font-size: xx-large;
+}
+blockquote.wd_pullquote:after {
+	content: " ”";
+	font-size: xx-large;
+	float: right;
+}
+.fullscreen-button {
+	border: 1px solid #d1d1d1;
+	background: #e3e3e3 url(images/webdriver/view_full_screen_button_background.png) no-repeat;
+	padding: 3px 3px 3px 30px;
+	margin: 5px 0px 5px 0px;
+	color: #727272;
+	width: 220px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.wd_contact {
+	margin: 1em 0;
+}
+.wd_release_data {
+	margin: 1em 0;
+}
+.wd_caption {
+	text-align: center;
+	font-size: 0.72em;
+	font-style: italic;
+	margin: 1em 0 0 0;
+}
+</style>
+
+<!-- end spin_special_output(head_start) -->
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<meta name="rights" content="© Copyright IBM Corporation 2024">
+	<meta name="referrer" content="no-referrer-when-downgrade">
+	<script>cpp = {"path":"\/cloud\/ajax\/product\/{product}"}</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+	<title>IBM Unveils Next Chapter of watsonx with Open Source, Product & Ecosystem Innovations to Drive Enterprise AI at Scale</title>
+	
+ <meta name="keywords" content="IBM, IBM Think, Think, watsonx, " />
+ <meta name="description" content="IBM announced several new updates to its watsonx platform one year after its introduction, as well as upcoming data and automation capabilities designed to make artificial intelligence (AI) more open, cost effective, and flexible for businesses. " />
+ <meta name="twitter:card" content="summary" />
+ <meta name="twitter:title" content="IBM Unveils Next Chapter of watsonx with Open Source, Product &amp; Ecosystem Innovations to Drive Enterprise AI at Scale" />
+ <meta name="twitter:description" content="IBM announced several new updates to its watsonx platform one year after its introduction, as well as upcoming data and automation capabilities designed to make artificial intelligence (AI) more open, cost effective, and flexible for businesses. " />
+ <meta name="twitter:image" content="https://newsroom.ibm.com/image/THINK_1920x1080.png" />
+ <meta property="og:site_name" content="IBM Newsroom" />
+ <meta property="og:url" content="https://newsroom.ibm.com/2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source,-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale" />
+ <meta property="og:title" content="IBM Unveils Next Chapter of watsonx with Open Source, Product &amp; Ecosystem Innovations to Drive Enterprise AI at Scale" />
+ <meta property="og:description" content="IBM announced several new updates to its watsonx platform one year after its introduction, as well as upcoming data and automation capabilities designed to make artificial intelligence (AI) more open, cost effective, and flexible for businesses. " />
+ <meta name="image" property="og:image" content="https://newsroom.ibm.com/image/THINK_1920x1080.png" />
+	<link rel="alternate" hreflang="en-us" href="https://www.ibm.com/us-en/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.ibm.com" />
+    
+	<!-- <link rel="stylesheet" href="css/www.css" media="all">
+	<link rel="stylesheet" href="css/styles.chunk.css">
+	<link rel="stylesheet" href="css/expertise.css" media="all">
+	<link rel="stylesheet" href="css/forms.css" media="all">
+	<link rel="stylesheet" href="css/syntaxhighlighter.css" media="all">
+	<link rel="stylesheet" href="css/tables.css" media="all">
+	<link rel="stylesheet" href="css/grid-fluid.css" media="all">
+	<link rel="stylesheet" href="css/css_Cr98Co91qznllKC9Wy5J_7gpdfQEqV0SybQw-ck_JqE__iOLGJsklPd7.css" media="all"> -->
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/styles.chunk.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/wdcontent.css">
+	<link rel="alternate" href="https://newsroom.ibm.com/announcements?pagetemplate=rss" type="application/rss+xml" title="IBM - Announcements">			<!--<script src="https://1.www.s81c.com/common/v18/js/www.js"></script>-->
+	<script type="module">
+      //import 'https://1.www.s81c.com/common/carbon-for-ibm-dotcom/latest/ibmdotcom-web-components-dotcom-shell.min.js';
+	</script>
+	<!--[if lte IE 8]>
+	<script src="//1.cms.s81c.com/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA__iOLGJsklPd7s--QzuQq7ItMADkdM4v3PHQXFA_udVU.js"></script>
+	<![endif]-->
+	<!-- <script src="js/js_dUs2LcFOOCh7KM9XOxYjXu0rvvyAosRovLTET5mKHdc__iOLGJsklPd7s-.js"></script> -->
+	<!-- <script src="js/www.js"></script> -->
+	<script>
+		//IBMCore.common.config.masthead.enabled = false;
+		//IBMCore.common.util.config.set({
+        //"masthead": {
+        //  "type": "alternate"
+        //}
+     // });
+	</script>
+	<script type = "text/javascript">
+		window._ibmAnalytics = {
+		"settings": {
+			"name": "Newsroom",
+			"tealiumProfileName": "ibm-web-app"
+		}
+	};
+	digitalData = {
+		"page": {
+			"pageInfo": {
+				"ibm": {
+				"siteId": "IBM_" + _ibmAnalytics.settings.name,
+				}
+			},
+			"category": {
+				"primaryCategory": "PC190"
+			}
+		}
+	};
+	
+	</script>
+	<script src="//1.www.s81c.com/common/stats/ibm-common.js" defer=""></script>
+			<!-- <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/v2.8.0/masthead.min.js"></script> -->
+
+<!-- begin spin_special_output(head_end) -->
+<link href="css/wd_wcag.css" type="text/css" rel="stylesheet" wd_script_id="wd_wcag.css">
+<script type="text/javascript" src="js/jquery.fancybox.min.js" wd_script_id="jquery.fancybox.min.js" nonce="NTZlNzc2NjM1YWZjMWU3NzBkY2Y5YzljYmY4MzM5ZmRhNWI3MWU5OQ=="></script>
+<link rel="canonical" href="https://newsroom.ibm.com/2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source,-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale" />
+<!-- end spin_special_output(head_end) -->
+</head>
+<body class="wd_pageid_20295 wd_item_page wd_item_128111 wd_featured_item_page ibm-type">
+	<div id="ibm-top" class="ibm-landing-page">
+		<!-- MASTHEAD_BEGIN -->
+		<!-- <c4d-masthead-container data-endpoint="/common/carbon-for-ibm-dotcom/translations/masthead-footer/v2.1"></c4d-masthead-container> -->
+		<div class="bx--masthead__l0">
+			<header role="banner" class="bx--header">
+				<a id="link" part="link" class="bx--header__name" href="https://www.ibm.com/" aria-label="IBM logo"><svg focusable="false" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" width="58px" height="23px" viewBox="0 0 58 23"><!----><title>IBM Logo</title><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="ibm-8-bar-logo--h15-copy" fill="#161616"><path d="M58,21.4666667 L58,23 L50.3684211,23 L50.3684211,21.4666667 L58,21.4666667 Z M39.6842105,21.4666667 L39.6842105,23 L32.0526316,23 L32.0526316,21.4666667 L39.6842105,21.4666667 Z M45.6385329,21.4666667 L45.0245693,23 L44.41871,21.4666667 L45.6385329,21.4666667 Z M28.5421053,21.4666667 C27.4471432,22.4188667 26.0029202,23 24.3905263,23 L24.3905263,23 L12.2105263,23 L12.2105263,21.4666667 Z M10.6842105,21.4666667 L10.6842105,23 L0,23 L0,21.4666667 L10.6842105,21.4666667 Z M39.6842105,18.4 L39.6842105,19.9333333 L32.0526316,19.9333333 L32.0526316,18.4 L39.6842105,18.4 Z M46.8318522,18.4 L46.2377311,19.9333333 L43.8212353,19.9333333 L43.2226426,18.4 L46.8318522,18.4 Z M30.0684211,18.4 C29.9306437,18.9451697 29.7105614,19.4599515 29.4273684,19.9333333 L29.4273684,19.9333333 L12.2105263,19.9333333 L12.2105263,18.4 Z M10.6842105,18.4 L10.6842105,19.9333333 L0,19.9333333 L0,18.4 L10.6842105,18.4 Z M58,18.4 L58,19.9333333 L50.3684211,19.9333333 L50.3684211,18.4 L58,18.4 Z M54.9473684,15.3333333 L54.9473684,16.8666667 L50.3684211,16.8666667 L50.3684211,15.3333333 L54.9473684,15.3333333 Z M39.6842105,15.3333333 L39.6842105,16.8666667 L35.1052632,16.8666667 L35.1052632,15.3333333 L39.6842105,15.3333333 Z M48.0292704,15.3333333 L47.4295831,16.8666667 L42.6233978,16.8666667 L42.019006,15.3333333 L48.0292704,15.3333333 Z M29.8547368,15.3333333 C29.991899,15.8221879 30.0684211,16.3357152 30.0684211,16.8666667 L30.0684211,16.8666667 L24.4210526,16.8666667 L24.4210526,15.3333333 Z M19.8421053,15.3333333 L19.8421053,16.8666667 L15.2631579,16.8666667 L15.2631579,15.3333333 L19.8421053,15.3333333 Z M7.63157895,15.3333333 L7.63157895,16.8666667 L3.05263158,16.8666667 L3.05263158,15.3333333 L7.63157895,15.3333333 Z M54.9473684,12.2666667 L54.9473684,13.8 L50.3684211,13.8 L50.3684211,12.2666667 L54.9473684,12.2666667 Z M39.6842105,12.2666667 L39.6842105,13.8 L35.1052632,13.8 L35.1052632,12.2666667 L39.6842105,12.2666667 Z M49.2252679,12.2666667 L48.6284686,13.8 L41.4089474,13.8 L40.8168134,12.2666667 L49.2252679,12.2666667 Z M27.9773684,12.2666667 C28.5037637,12.6994848 28.9570701,13.2181697 29.3052632,13.8 L29.3052632,13.8 L15.2631579,13.8 L15.2631579,12.2666667 Z M7.63157895,12.2666667 L7.63157895,13.8 L3.05263158,13.8 L3.05263158,12.2666667 L7.63157895,12.2666667 Z M44.5987396,9.2 L45.0263158,10.4393515 L45.4535426,9.2 L54.9473684,9.2 L54.9473684,10.7333333 L50.3684211,10.7333333 L50.3684211,9.32433939 L49.8494737,10.7333333 L40.1878947,10.7333333 L39.6842105,9.3242 L39.6842105,10.7333333 L35.1052632,10.7333333 L35.1052632,9.2 L44.5987396,9.2 Z M7.63157895,9.2 L7.63157895,10.7333333 L3.05263158,10.7333333 L3.05263158,9.2 L7.63157895,9.2 Z M29.3052632,9.2 C28.9570701,9.7818303 28.5037637,10.3003758 27.9773684,10.7333333 L27.9773684,10.7333333 L15.2631579,10.7333333 L15.2631579,9.2 Z M54.9473684,6.13333333 L54.9473684,7.66666667 L45.9831118,7.66666667 L46.5234001,6.13333333 L54.9473684,6.13333333 Z M43.534302,6.13333333 L44.0745993,7.66666667 L35.1052632,7.66666667 L35.1052632,6.13333333 L43.534302,6.13333333 Z M30.0684211,6.13333333 C30.0684211,6.66414545 29.991899,7.17767273 29.8547368,7.66666667 L29.8547368,7.66666667 L24.4210526,7.66666667 L24.4210526,6.13333333 Z M19.8421053,6.13333333 L19.8421053,7.66666667 L15.2631579,7.66666667 L15.2631579,6.13333333 L19.8421053,6.13333333 Z M7.63157895,6.13333333 L7.63157895,7.66666667 L3.05263158,7.66666667 L3.05263158,6.13333333 L7.63157895,6.13333333 Z M42.4774196,3.06666667 L43.0079113,4.6 L32.0527757,4.6 L32.0526316,3.06666667 L42.4774196,3.06666667 Z M58,3.06666667 L58,4.6 L47.0390632,4.6 L47.5903678,3.06666667 L58,3.06666667 Z M29.4273684,3.06666667 C29.7105614,3.54004848 29.9306437,4.0548303 30.0684211,4.6 L30.0684211,4.6 L12.2105263,4.6 L12.2105263,3.06666667 Z M10.6842105,3.06666667 L10.6842105,4.6 L0,4.6 L0,3.06666667 L10.6842105,3.06666667 Z M41.4056725,0 L41.9462722,1.53333333 L32.05278,1.53333333 L32.0526316,0 L41.4056725,0 Z M58,0 L58,1.53333333 L48.1188427,1.53333333 L48.6466706,0 L58,0 Z M24.3905263,0 C25.9912083,0 27.4472798,0.581133333 28.5421053,1.53333333 L28.5421053,1.53333333 L12.2105263,1.53333333 L12.2105263,0 Z M10.6842105,0 L10.6842105,1.53333333 L0,1.53333333 L0,0 L10.6842105,0 Z" id="Combined-Shape"></path></g></g></svg></a>				
+				<!-- <dds-search-with-typeahead></search-with-typeahead> -->
+				<!-- <a role="menuitem" tabindex="0" href="javascript:void 0" aria-haspopup="menu" class="bx--header__menu-item bx--header__menu-title" aria-expanded="false" aria-label="User profile">
+        			<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32"><path d="M16 4a5 5 0 11-5 5 5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0016 2zM26 30H24V25a5 5 0 00-5-5H13a5 5 0 00-5 5v5H6V25a7 7 0 017-7h6a7 7 0 017 7z"></path></svg>
+    			</a>
+				<ul role="menu" class="bx--header__menu">
+					<li><a part="link" role="menuitem" tabindex="0" class="bx--header__menu-item" href="https://myibm.ibm.com/?lnk=mmi"> <span part="title" class="bx--text-truncate--end"></span> </a></li>
+					<li><a part="link" role="menuitem" tabindex="0" class="bx--header__menu-item" href="https://login.ibm.com/oidc/endpoint/default/authorize?redirect_uri=https%3A%2F%2Fmyibm.ibm.com%2FOIDCHandler.html&amp;response_type=token&amp;client_id=v18LoginProdCI&amp;scope=openid&amp;state=http%3A%2F%2Fstage.mediaroom.com%2Fibmnewsroom%2Fannouncements&amp;nonce=8675309"> <span part="title" class="bx--text-truncate--end"></span> </a></li>
+				</ul>-->
+				<div class="bx--header__search">
+					<div class="wd_search_form_container"><form name="basic_search" method="get" action="https://newsroom.ibm.com/index.php?s=20322" class="wd_search_form wd_search_form_basic"><input type="hidden" name="s" value="search_results" /><input type="text" name="query" value="" size="32" placeholder="Search the IBM Newsroom" title="Search the IBM Newsroom" /> <a href="#" onclick="webDriver.jQuery(this).closest('form').submit(); return false;"><button role="button" value="Submit" type="submit"><svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32"><title>Submit</title><path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"></path></svg></button></a></form>
+</div>          		</div>
+				<div class="bx--header__search--actions">
+					<button type="button" part="open-button" class="bx--header__action bx--header__search--search" aria-label="Open IBM search field">
+						<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32">
+							<path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"></path>
+						</svg>
+					</button>
+					<button type="button" part="close-button" class="bx--header__action bx--header__search--close" aria-label="Close">
+						<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32">
+							<path d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"></path>
+						</svg>
+					</button>
+				</div>				
+			</header>
+		</div>
+		<dds-masthead-container></dds-masthead-container>
+		<!-- MASTHEAD_END -->
+		<div id="ibm-content-wrapper">		
+			<!-- <header role="banner" class="bx--header wd_nav_header">
+				<a class="bx--header__name pl-header-text" href="index.php"><span class="bx--header__name--prefix">IBM&nbsp;</span>Newsroom</a>
+				<div class="ibm-divider"></div>
+				<button data-autoid="dds--masthead-default-sidenav__l0-menu" aria-label="Open menu" class="bx--header__action bx--header__menu-trigger bx--header__menu-toggle bx--header__menu-toggle__hidden" title="Open menu" type="button">
+					<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+						<path d="M2 14.8H18V16H2zM2 11.2H18V12.399999999999999H2zM2 7.6H18V8.799999999999999H2zM2 4H18V5.2H2z"></path>
+					</svg>
+				</button>
+				<nav role="navigation">
+					<div class="ibm-sitenav-menu-list">
+											</div>
+				</nav>
+			</header> -->
+			<header role="banner" class="wd_nav_header">
+				<div class="cds--css-grid">
+					<div class="cds--col-span-16">
+						<a class="bx--header__name pl-header-text" href="index.php"><span class="bx--header__name--prefix">IBM&nbsp;</span>Newsroom</a>
+						<button data-autoid="dds--masthead-default-sidenav__l0-menu" aria-label="Open menu" class="bx--header__action bx--header__menu-trigger bx--header__menu-toggle bx--header__menu-toggle__hidden" title="Open menu" type="button">
+							<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+								<path d="M2 14.8H18V16H2zM2 11.2H18V12.399999999999999H2zM2 7.6H18V8.799999999999999H2zM2 4H18V5.2H2z"></path>
+							</svg>
+						</button>
+						<nav role="navigation">
+							<div class="ibm-sitenav-menu-list">
+								<ul role="menubar">
+	<li class="ibm-haschildlist active" role="presentation">
+	<button role="menuitem" tabindex="0">News</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/announcements" tabindex="-1" target="_self">All press releases</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-artificial-intelligence" tabindex="-1" target="_self">Artificial intelligence</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-hybrid-cloud" tabindex="-1" target="_self">Hybrid cloud</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-research-and-innovation" tabindex="-1" target="_self">Research and innovation</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-corporate" tabindex="-1" target="_self">Corporate</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-new-social-impact" tabindex="-1" target="_self">Social impact</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/mergers-and-acquisitions" tabindex="-1" target="_self">Mergers & acquisitions</a></li>
+</ul>
+	</li>
+	<li class="ibm-haschildlist" role="presentation">
+	<button role="menuitem" tabindex="0">Media resources</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/media-center" tabindex="-1" target="_self">Asset gallery</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/contacts" tabindex="-1" target="_self">Media contacts</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/global-news-room" tabindex="-1" target="_self">Global newsrooms</a></li>
+</ul>
+	</li>
+	<li class="ibm-haschildlist" role="presentation">
+	<button role="menuitem" tabindex="0">Inside IBM</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/executive-bios" tabindex="-1" target="_self">Leadership</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/about-IBM" tabindex="-1" target="_self">About IBM</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/investor" tabindex="-1" target="_self">Investor relations</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/annualreport/" tabindex="-1" target="_self">Annual report</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/reports/analyst" tabindex="-1" target="_self">Analyst reports</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/topics/corporate-social-responsibility" tabindex="-1" target="_self">CSR</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/policy/about-new/?utm_content=SRCWW&p1=Search&p4=43700066458429724&p5=e&gad_source=1&gclid=Cj0KCQjwwYSwBhDcARIsAOyL0fgNi85QEoribCI6MFuUy-yCt3JoHxZzfD-BV-lfgSGL4OEf4DnlnqUaArV4EALw_wcB&gclsrc=aw.ds" tabindex="-1" target="_self">IBM policy</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/awards" tabindex="-1" target="_self">Awards</a></li>
+</ul>
+	</li>
+	<li class="ibm-haschildlist" role="presentation">
+	<button role="menuitem" tabindex="0">Blog</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/blog/" tabindex="-1" target="_self">IBM blog</a></li>
+	<li role="presentation"><a role="menuitem" href="https://research.ibm.com/blog" tabindex="-1" target="_self">IBM Research blog</a></li>
+	<li role="presentation"><a role="menuitem" href="https://securityintelligence.com/" tabindex="-1" target="_self">securityintelligence.com</a></li>
+</ul>
+	</li>
+	<li role="presentation"><a role="button" href="subscribe?pagetemplate=modal" class="wd_fancybox">Subscribe</a></li>
+</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+			<main role="main" aria-label="Experience IBM">
+								<div id="ibm-pcon">
+					<div id="ibm-content">
+						<div id="ibm-content-body" class="ibm-padding-top-0">
+							<div id="ibm-content-main">
+								
+																																								
+								
+								
+																			
+								 
+																<section>
+									<div class="cds--css-grid ibm-pt-6 ibm-mt-6 ibm-pb-3 wd_header_container">
+										<div class="cds--col-span-16 think-content-row">
+											<h1>All press releases</h1>
+										</div>
+									</div>												
+									<!-- <div class="cds--css-grid ibm-pt-2">
+										<div id="wd_featured_item" class="cds--col-span-16 ibm-pb-5">
+																							<img class="wd_featured_image" src="" alt="" />
+																					</div>
+									</div> -->
+									<div class="cds--css-grid ibm-pt-2">
+										<!-- <div class="cds--col-span-1 ibm-mb-3" id="wd_page_tools"></div> -->
+										<div class="cds--col-span-12 ibm-mb-3">
+											<!-- BEGIN CONTENT-WRAPPER -->	
+											<div class="wd_content">
+																								<div id="wd_printable_content">
+<div class="wd_newsfeed_releases-detail">
+<div id="wd_move_content_up">
+<h1 class="wd_title wd_language_left">IBM Unveils Next Chapter of watsonx with Open Source, Product & Ecosystem Innovations to Drive Enterprise AI at Scale</h1>
+<div class="wd_subtitle wd_language_left">•	Releases a family of IBM Granite models into open source, including its most capable and efficient Code LLMs that can out-perform larger code models on many industry benchmarks</div><div class="wd_subtitle wd_language_left">•	Jointly with Red Hat, launches InstructLab, a first-of-its-kind model alignment technique, to bring open-source community contributions directly into LLMs</div><div class="wd_subtitle wd_language_left">•	Unveils new vision and momentum for new data and automation capabilities; Accelerates generative AI infusion into IBM assistants, automation, infrastructure, resource management products and consulting services</div><div class="wd_subtitle wd_language_left">•	Strengthens collaborations with AWS, Adobe, Meta, Microsoft, Mistral AI, Palo Alto Networks, SAP, Salesforce, and SDAIA to expand capabilities and offer model choice, flexibility and governance through watsonx</div>
+<div class="wd_date">May 21, 2024</div>
+
+			<div class="wd_captioned_image" style="float: left;  margin: 10px 10px 10px 0px; width: 1921px;">
+				<div class="wd_image"><img src="/image/Think+23_Banner.jpg" border="0"/></div>
+				
+			</div>
+		
+</div>
+<div class="wd_toolbar wd_toolbar-detail"><ul class="wd_tools"><li class="wd_tool wd_tool-print"><span class="wd_tool_icon"><a onclick="view_printable(); return false;" rel="nofollow" href="#print" title="print"><span class="fa fa-print"></span></a></span></li><li class="wd_tool wd_tool-email"><span class="wd_tool_icon"><a onclick="window.location.href = 'mailto:?subject=IBM%20Unveils%20Next%20Chapter%20of%20watsonx%20with%20Open%20Source%2C%20Product%20%26%20Ecosystem%20Innovations%20to%20Drive%20Enterprise%20AI%20at%20Scale&amp;body='+encodeURIComponent(window.location.href);return false;" href="#email" title="email"><span class="fa fa-envelope"></span></a></span></li><li class="wd_tool wd_tool-rss"><span class="wd_tool_icon"><a href="https://newsroom.ibm.com/index.php?s=20324&amp;rsspage=20295" title="rss"><span class="fa fa-rss"></span></a></span></li><li class="wd_tool wd_tool-pdf"><span class="wd_tool_icon"><a href="https://newsroom.ibm.com/2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source,-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale?asPDF=1" rel="nofollow" title="pdf"><span class="fa fa-file-pdf-o"></span></a></span></li></ul></div>
+
+
+			
+		
+
+<style type="text/css">
+
+			div.wd_news_body img {
+				margin: 0 0 20px 20px;
+				float:right;
+				max-width: 250px;
+				max-height: 250px;
+				width: auto !important;
+				height: auto !important;
+			}
+		
+				div.PRN_ImbeddedAssetReference{
+					display: none;
+				}
+				div[id^="prni_dvprne"]{
+					display: none;
+				}
+			</style>
+
+<div class="wd_body wd_news_body" wd_resize="formatNews" wd_print_url="https://newsroom.ibm.com/2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source,-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale?printable=1"><p>ARMONK, N.Y.,&nbsp;May 21, 2024 &ndash; Today, at its annual THINK conference, IBM (NYSE: <a href="http://www.ibm.com/investor">IBM</a>) announced several new updates to its <a href="https://www.ibm.com/watsonx">watsonx</a> platform one year after its introduction, as well as upcoming data and automation capabilities designed to make <a href="https://www.ibm.com/topics/artificial-intelligence">artificial intelligence (AI)</a> more open, cost effective, and flexible for businesses. During his opening keynote, CEO Arvind Krishna will share the company&rsquo;s plans to invest in, build and contribute to the open-source AI community as a core part of IBM&rsquo;s strategy.</p>
+
+<p>&ldquo;We firmly believe in bringing open innovation to AI. We want to use the power of open source to do with AI what was successfully done with Linux and OpenShift,&rdquo; said Krishna. &ldquo;Open means choice. Open means more eyes on the code, more minds on the problems, and more hands on the solutions. For any technology to gain velocity and become ubiquitous, you&rsquo;ve got to balance three things: competition, innovation, and safety. Open source is a great way to achieve all three.&rdquo;</p>
+
+<p><strong>IBM released a family of Granite models into open source and launched InstructLab, a first-of-its-kind capability, in collaboration with Red Hat</strong></p>
+
+<p>Furthering its commitment to the open-source AI ecosystem, IBM has now open-sourced a family of its most advanced and performant language and <a href="https://research.ibm.com/blog/granite-code-models-open-source">code Granite models</a>. By open sourcing these models, IBM is inviting clients, developers and global experts to build on these strengths and push the boundaries of what AI can achieve in enterprise environments.</p>
+
+<p>Available today under Apache 2.0 licenses on Hugging Face and GitHub, the open-source Granite models stand out for their development process, quality, transparency and efficiency. The Granite code models range from 3B to 34B parameters and come in both base and instruction-following model variants, which are suitable for tasks such as complex application modernization, code generation, fixing bugs, explaining and documenting code, maintaining repositories and more. The code models, trained on 116 programming languages, consistently reach state-of-the-art performance among open-source code LLMs across various code-related tasks<a href="#_edn1" name="_ednref1" title="">[i]</a>:</p>
+
+<ul>
+	<li>Testing by IBM found that the Granite Code models overall show very strong performance across all model sizes and benchmarks, often outperforming other open-source code models that are twice as large compared to Granite.<a href="#_edn2" name="_ednref2" title="">[ii]</a></li>
+	<li>Testing by IBM on benchmarks including HumanEvalPack, HumanEvalPlus, and reasoning benchmark GSM8K showed Granite code models have strong performances on code synthesis, fixing, explanation, editing, and translation across most major programming languages, including Python, JavaScript, Java, Go, C++, and Rust.<a href="#_edn3" name="_ednref3" title="">[iii]</a></li>
+	<li>The 20B parameter Granite base code model was used to train IBM watsonx Code Assistant (WCA) for specialized domains. It also powers watsonx Code Assistant for Z &mdash; a product designed to help enterprises transform monolithic COBOL applications into services optimized for IBM Z.</li>
+	<li>The 20B parameter Granite base code model was tuned to generate SQL from natural language questions for the purpose of transforming structured data and extracting insights from that data. IBM demonstrated leadership in natural language to SQL, an important industry use case, as benchmarked by BIRD&#39;s independent leaderboard, which ranks models according to Execution Accuracy (EX) and Valid Efficiency Score (VES).<a href="#_edn4" name="_ednref4" title="">[iv]</a></li>
+</ul>
+
+<p>IBM and Red Hat also recently launched <a href="https://www.redhat.com/en/topics/ai/what-is-instructlab">InstructLab</a> &mdash; a revolutionary approach to advancing true open-source innovation around LLMs.</p>
+
+<p>The InstructLab methodology allows for continuous development of base models through constant incremental contributions, much like software development has worked in open source for decades. With InstructLab, developers can build models specific to their business domains or industries with their own data, so that they can see the direct value of AI rather than just the model providers seeing the value. IBM plans to harness these open-source contributions to bring additional value to its clients through integrations with watsonx.ai and the new Red Hat Enterprise Linux AI (RHEL AI) solution.</p>
+
+<p>RHEL AI comprises an enterprise-ready version of the InstructLab, IBM&rsquo;s open-source Granite models, and the world&rsquo;s leading enterprise Linux platform to simplify AI deployment across hybrid infrastructure environments. <a href="https://www.ibm.com/blog/announcement/democratizing-large-language-model-development-with-instructlab-support-in-watsonx-ai/"><em>Read this blog to learn more about Instruct Lab and watsonx.ai.</em></a></p>
+
+<p>IBM Consulting is also launching a practice to help clients leverage InstructLab with their own proprietary data to train purpose-specific AI models that can be scaled to better fit the cost and performance requirements of an enterprise&rsquo;s business needs. <a href="https://newsroom.ibm.com/Blog-IBM-Consulting-Expands-Capabilities-to-Help-Enterprises-Scale-AI"><em>Read this blog to learn more about how IBM Consulting is helping enterprises adopt AI.</em></a></p>
+
+<p><strong>IBM unveils a new class of watsonx assistants</strong></p>
+
+<p>This new wave of AI innovation has the potential to unlock an estimated $4 trillion in annual economic benefits across industries.<a href="#_edn5" name="_ednref5" title="">[v]</a> However, IBM&rsquo;s annual Global AI Adoption Index recently found that while 42% of enterprise-scale companies (&gt; 1,000 employees) surveyed have implemented AI in their business, another 40% of those companies that are exploring or experimenting with AI have yet to deploy their models. For the companies stuck in the sandbox, 2024 is the year of overcoming barriers to entry such as the skills gap, data complexity and &ndash; perhaps most importantly &ndash; trust.</p>
+
+<p>To address these challenges, IBM is announcing several upcoming updates and enhancements to its family of watsonx assistants, along with an upcoming <a href="http://www.ibm.com/blog/announcements/watsonx-orchestrate-ai-z-assistant">capability in watsonx Orchestrate</a> to help clients build their own AI Assistants across domains.</p>
+
+<p>The new AI Assistants include watsonx Code Assistant for Enterprise Java Applications (planned availability in October 2024), watsonx Assistant for Z to transform how users interact with the system to quickly transfer knowledge and expertise (planned availability in June 2024), and an expansion of watsonx Code Assistant for Z Service with code explanation to help clients understand and document applications through natural language (planned availability in June 2024). <em>Read more on </em><a href="https://www.ibm.com/blog/announcement/watsonx-code-assistant-java/"><em>watsonx Code Assistant for Enterprise Java Applications</em></a><em>, </em><a href="http://www.ibm.com/blog/announcements/watsonx-orchestrate-ai-z-assistant"><em>watsonx Assistant for Z,</em></a><em> and </em><a href="https://www.ibm.com/blog/announcement/ibm-watsonx-code-assistant-for-z-accelerate-the-application-lifecycle-with-generative-ai-and-automation/" target="_blank"><em>Watsonx Code Assistant for Z</em></a><em>.</em></p>
+
+<p>IBM is expanding its NVIDIA GPU offerings to now offer NVIDIA L40S and NVIDIA L4 Tensor Core GPUs, as well as support for Red Hat Enterprise Linux AI (RHEL AI) and OpenShift AI to help enterprises and developers address the needs of AI and other mission-critical workloads. Additionally, to help clients accelerate time to value for AI, IBM is using deployable architectures for watsonx to enable quick AI deployment while empowering enterprises with security and compliance capabilities to help them protect their data and manage compliance controls. <a href="https://newsroom.ibm.com/Blog-How-IBM-Cloud-is-Accelerating-Business-Outcomes-with-Gen-AI"><em>Read this blog to learn more about IBM Cloud capabilities</em></a><em>.</em></p>
+
+<p>Additionally, IBM has announced several new and upcoming generative AI powered data products and capabilities to augment how organizations observe, govern, and optimize their increasingly robust and complex data for AI workloads. Learn more about the upcoming IBM <a href="http://www.ibm.com/blog/announcements/data-product-hub">Data Product Hub</a> (planned availability in June 2024), Data Gate for watsonx (planned availability in June 2024), and a host of the latest and planned updates on watsonx.data. <a href="https://www.ibm.com/blog/announcement/delivering-superior-price-performance-and-enhanced-data-management-for-ai-with-ibm-watsonx-data/"><em>Read this blog to learn more about these data capabilities. </em></a>&nbsp;</p>
+
+<p><strong>IBM previews new vision and capabilities for AI-powered automation</strong></p>
+
+<p>Hybrid cloud and AI are transforming how companies do business. The average enterprise today manages multiple cloud environments &mdash; public and private &mdash; and around 1,000 apps,<a href="#_edn6" name="_ednref6" title="">[vi]</a> each with multiple dependencies. They also deal with petabytes of data. With generative AI expected to drive up to 1 billion apps by 2028,<a href="#_edn7" name="_ednref7" title="">[vii]</a> automation is no longer an option &ndash; it is how businesses will save time, solve problems, and make decisions faster.</p>
+
+<p>IBM is addressing these challenges by delivering a set of AI-powered automation capabilities that will allow CIOs to move from proactive management of their IT environments to AI-powered predictive automation. AI-powered automation will be an essential tool for driving the speed, performance, scalability, security, cost efficiency of an enterprise&#39;s infrastructure.</p>
+
+<p>Today, IBM&rsquo;s portfolio of automation, networking, data, application, and infrastructure management products help businesses manage their increasingly complex IT environments. For technology business management, <a href="https://www.apptio.com/blog/apptio-introduces-new-products-to-elevate-technology-value/">Apptio</a> enables organizations to make informed, data-driven decisions about their investments by driving clarity on technology spend and how it drives business value &mdash; enabling organizations to quickly respond to changing market conditions. Clients can also combine Apptio with the power of <a href="https://newsroom.ibm.com/Blog-Unlock-Operational-Excellence-with-IBM-Instanas-Intelligent-Remediation">Instana</a> for automated observability and <a href="https://www.ibm.com/blog/announcement/optimize-gpu-resources-turbonomic/" target="_blank">Turbonomic</a> for performance optimization to help clients efficiently allocate resources and control IT spend through enhanced visibility and real-time insights, allowing them to focus more time on deploying and scaling AI to drive new innovative initiatives.</p>
+
+<p>To complement these products, IBM <a href="https://newsroom.ibm.com/2024-04-24-IBM-to-Acquire-HashiCorp-Inc-Creating-a-Comprehensive-End-to-End-Hybrid-Cloud-Platform">recently announced</a> its intent to acquire HashiCorp, which helps organizations automate multi-cloud and hybrid environments with Infrastructure Lifecycle Management and Security Lifecycle Management with products including Terraform, Vault and others. With HashiCorp, clients can easily move to and operate across multi-cloud and hybrid cloud environments.&nbsp;</p>
+
+<p>Now, at THINK, IBM is continuing to advance its state-of-the-art in automation portfolio by previewing a new generative AI-powered tool called IBM Concert, which will be generally available in June 2024. IBM Concert will serve as the &lsquo;nerve center&rsquo; of an enterprise&rsquo;s technology and operations.</p>
+
+<p>Powered by AI from watsonx, IBM Concert will provide generative AI-driven insights across clients&rsquo; portfolios of applications to identify, predict, and suggest fixes for problems. The new tool integrates into clients&rsquo; existing systems, using generative AI to connect with data from their cloud infrastructure, source repositories, CI/CD pipelines and other existing application management solutions to build out a detailed view of their connected applications.</p>
+
+<p>By allowing clients to eliminate unnecessary tasks and accelerate others, Concert is designed to make teams more informed so they can be fast and responsive in addressing issues and solving problems before they happen. Concert will initially focus on helping application owners, SREs and IT leaders gain insights about, pre-empt and more quickly address issues around application risk and compliance management. <a href="https://newsroom.ibm.com/Blog-Introducing-IBM-Concert-Control-your-operations-with-generative-AI-insights"><em>Read this blog to learn more about IBM Concert.</em></a></p>
+
+<p><strong>IBM expands ecosystem access to watsonx, adds third-party models</strong></p>
+
+<p>IBM continues to foster a strong ecosystem of partners to offer clients choice and flexibility through <a href="http://www.ibm.com/blog/announcements/enterprise-grade-model-choices" target="_blank">bringing third-party models onto watsonx</a>, enabling leading software companies to embed watsonx capabilities into their technologies, and offering IBM Consulting expertise for enterprise business transformation. IBM Consulting has rapidly expanded its global generative AI expertise, with more than 50,000 practitioners certified in IBM and strategic partner technologies. Our ecosystem of partners, large and small, are helping clients adopt and scale tailored AI across their businesses.&nbsp;</p>
+
+<ul>
+	<li><strong>AWS:</strong> IBM and AWS are partnering to bring together <a href="https://newsroom.ibm.com/2024-05-21-IBM-Expands-watsonx-Portfolio-on-AWS,-Adds-watsonx-governance-to-Help-Clients-Scale-Responsible-AI" target="_blank">Amazon SageMaker</a> and watsonx.governance on AWS. Available now, this product will equip Amazon SageMaker clients with advanced AI governance capabilities for their predictive machine learning and generative AI models. Clients can now govern, monitor, and manage their models across platforms, simplifying risk management and compliance processes for their AI operations.</li>
+	<li><strong>Adobe:&nbsp;</strong> IBM and Adobe are collaborating on hybrid cloud and AI, bringing Red Hat OpenShift and watsonx to Adobe Experience Platform and are exploring making <a href="http://watsonx.ai/">watsonx.ai</a> and Adobe Acrobat AI Assistant available on-prem and private cloud. IBM is also introducing a new consulting service to advance client adoption of Adobe Express. These capabilities are expected to become available in 2H24.</li>
+	<li><strong>Meta:</strong> IBM has announced the availability of Meta Llama 3 &mdash; the next generation of Meta&rsquo;s open large language model &mdash; on watsonx to help enterprises innovate on their AI journeys. The addition of Llama 3 builds on IBM&#39;s collaboration with Meta to advance open innovation for AI. The two companies launched the <a href="https://thealliance.ai/blog/alliance_launch">AI Alliance</a> &mdash; a group of leading organizations across industry, startup, academia, research and government &mdash; late last year, and it has since grown to more than 100 members and collaborators.</li>
+	<li><strong>Microsoft:</strong> IBM is announcing that the watsonx AI and data platform is supported by IBM to run on Microsoft Azure and available to purchase through IBM and our business partner ecosystem as a customer-managed solution on Azure Red Hat OpenShift (ARO).</li>
+	<li><strong>Mistral:</strong> IBM is announcing its intent to create a new strategic partnership with Mistral AI to bring its latest commercial models to the watsonx platform, including the leading Mistral Large model, which the company plans to make available in 2Q24. IBM looks forward collaborating with Mistral AI on open innovation, building on both companies&rsquo; work in the open-source community.</li>
+	<li><strong>Palo Alto Networks</strong>: IBM has expanded its partnership with Palo Alto to jointly deliver AI-powered security offerings and several initiatives to improve security outcomes for clients. For more, read the full <a href="https://newsroom.ibm.com/2024-05-15-Palo-Alto-Networks-and-IBM-to-Jointly-Provide-AI-powered-Security-Offerings-IBM-to-Deliver-Security-Consulting-Services-Across-Palo-Alto-Networks-Security-Platforms">press release</a>.</li>
+	<li><strong>Salesforce: </strong>IBM and Salesforce are exploring making the IBM Granite model series&nbsp;available later this year for use across the <a href="https://newsroom.ibm.com/2024-05-21-IBM-and-Salesforce-Expand-Partnership-to-Advance-Open,-Trusted-AI-and-Data-Ecosystems" target="_blank">Salesforce Einstein 1</a> platform, with the aim to provide clients access to more models to enhance decision making for AI CRM use cases.</li>
+	<li><strong>SAP:</strong> IBM Consulting and SAP are also collaborating to find ways to help more customers accelerate their cloud journeys leveraging RISE with SAP so they can realize the transformative benefits of generative AI for business in the cloud. This work seeks to expand on IBM and SAP&rsquo;s collaboration around embedding IBM Watson AI technology into SAP solutions. As part of this initiative with SAP<strong>,</strong> the <a href="https://newsroom.ibm.com/2024-05-08-IBM-and-SAP-Plan-to-Expand-Collaboration-to-Help-Clients-Become-Next-Generation-Enterprises-with-Generative-AI">IBM Granite Model Series</a> is expected to be accessible for use across SAP&rsquo;s portfolio of cloud solutions and applications &ndash; which is underpinned by the generative AI hub in SAP AI Core.&nbsp;</li>
+	<li><strong>SDAIA:</strong> IBM has launched the Saudi Data and Artificial Intelligence Authority (SDAIA) &lsquo;ALLaM&rsquo; Arabic model on watsonx, adding new language capabilities to the platform, including the ability to understand multiple Arabic dialects.</li>
+</ul>
+
+<p>To see all THINK news, visit the <a href="https://newsroom.ibm.com/">IBM Newsroom</a>.</p>
+
+<p style="text-align: center;"><a class="bx--btn bx--btn--primary" href="https://newsroom.ibm.com/ibm-think-social-sharing">Access a suite of social assets to share across your<br />
+business and personal channels with our creative toolkit.</a></p>
+
+<p><br />
+<strong>Media Contact:</strong></p>
+
+<p>Amy Angelini<br />
+alangeli@us.ibm.com</p>
+
+<p><br />
+To read IBM recent client &amp; partner testimonials, see below:</p>
+
+<p><strong>Broadridge Financial: Leveraging Generative AI to Transform Financial Services</strong></p>
+
+<p>&ldquo;As a trusted global technology partner sitting at the intersection of financial services, application sustainability and advancement is critical to our business strategy to safely and confidently embrace new technologies and deliver advanced services to clients to help them better operate, innovate, and grow,&rdquo; said Tyler Derr, CTO, Broadridge Financial Solutions. &quot;Working with IBM, we are looking for ways to leverage AI to improve developer experience and productivity and to help understand and document our existing environments.&rdquo;</p>
+
+<p><strong>Casper Labs: Responsible AI Scaling with Blockchain-Enabled Data Governance Solution</strong><br />
+&ldquo;Trustworthy data is key to realizing AI&rsquo;s full potential, particularly in the current regulatory climate&rdquo; said Mrinal Manohar, CEO at Casper Labs. &ldquo;Without visibility into data flows, enterprises face unacceptable levels of risk, including intellectual property crossover and unnecessary data sharing across organizational lines. As an ecosystem partner, we&rsquo;re working with IBM Consulting to create Prove AI, a blockchain-enabled governance solution that pairs our tamper-resistant, highly serialized ledger with IBM watsonx.governance to provide enterprises with an end-to-end AI and data management platform that can safeguard sensitive data and ensure version control.&rdquo;</p>
+
+<p><strong>Department for Work and Pensions: Transforming Service Delivery with Generative AI</strong></p>
+
+<p>&ldquo;As the UK&rsquo;s largest public service department, we&rsquo;re using the power of generative AI to make a positive impact on the lives of the millions of citizens we serve every day,&rdquo; said Rich Corbridge, Director General and Chief Digital Information Officer, Department for Work and Pensions. &ldquo;Our collaboration with IBM is instrumental in helping us identify and test the most promising AI use cases, build a robust partner ecosystem, develop innovative governance and risk management approaches, and cultivate the skills needed to scale generative AI successfully across the Department.&rdquo; He added, &ldquo;At the heart of our approach are human-centred values, while maintaining a forward-looking focus. We prioritise creating simplified, reusable components which we are building through our partnership with IBM. Together, DWP and IBM are transforming the support systems the UK&#39;s most vulnerable people interact with every single day.&rdquo;</p>
+
+<p><strong>Dun &amp; Bradstreet: AI Adoption with Trusted Data and Co-Created Solutions</strong></p>
+
+<p>&ldquo;Enterprises need partners who can help them scale AI adoption, which starts with trusted data,&rdquo; said Gary Kotovets, Chief Data &amp; Analytics Officer at Dun &amp; Bradstreet. &ldquo;We&rsquo;re bringing together Dun &amp; Bradstreet and IBM&rsquo;s nearly 300 years of combined experience to create generative AI solutions that harness Dun &amp; Bradstreet Data Cloud and IBM watsonx to fuel generative AI adoption, starting with Ask Procurement. By leveraging IBM watsonx, D&amp;B Ask Procurement simplifies, accelerates, and reduces the cost of certain essential procurement decisions. Ask Procurement is just one of many examples of how, together, we can help clients drive savings, optimize business processes, and improve risk management with generative AI and reliable data.&rdquo;</p>
+
+<p><strong>Elevance Health: Driving an AI-first Digital-first Experience in Healthcare Customer Service</strong><br />
+<br />
+&ldquo;Elevance Health&rsquo;s purpose is to improve the health of humanity. We have the privilege of serving over 117M people, and are dedicated to making healthcare more proactive, predictive and personalized,&rsquo; said Kumar Gudavalli, Tech Strategy Lead &amp; Chief Architect, Elevance Health. &ldquo;Our longstanding and trusted relationship with IBM Consulting and the capabilities of IBM watsonx Assistant have helped us achieve both great member and provider experience and strong business outcomes. Driving an AI-first Digital-first experience, we were able to move up a third of interactions to messaging, and AI handles complex healthcare interactions with 60% effectiveness, while delivering much higher customer satisfaction and first contact resolution.&rdquo;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p><strong>Medtronic: IBM, Microsoft and Medtronic Drive AI-Powered Automation</strong></p>
+
+<p>&ldquo;We are so fortunate to live in a time of limitless potential, a time where we can experience first-hand the power of collaboration. Together with IBM and Microsoft, we are transforming challenges into groundbreaking analytics solutions, setting new industry standards through innovation and excellence,&rdquo; said Luciano Miranda, Vice President, Advanced Analytics Global Operations &amp; Supply Chain at Medtronic.</p>
+
+<p><strong>Sevilla FC: Scouting Reimagined with AI-powered Insights</strong><br />
+<br />
+&ldquo;At Sevilla FC, we&rsquo;re proud to be at the forefront of innovation in football, and our engagement with IBM is a testament to that commitment,&rdquo; said Jos&eacute; Mar&iacute;a del Nido Carrasco, Sevilla FC&#39;s President. &ldquo;Our team of 20+ expert scouts, former players and coaches, have curated a treasure trove of 400,000 player-game reports and 200,000 scouting notes, and now using IBM watsonx, we can unlock the full potential of this data, combining human insight with AI-driven analysis to make more informed, data-driven recruitment decisions. This game-changing work with IBM is a bold step forward in the future of football scouting.&rdquo;</p>
+
+<p><strong>Virgin Money wins &lsquo;Best application of AI in Financial Services&rsquo;</strong></p>
+
+<p>&ldquo;A year ago, we launched Redi, our Microsoft AI-powered virtual assistant, and we&rsquo;re thrilled to see over a million of our credit card customers engaging with this innovative technology,&rdquo; said Adam Paice, Head of Digital, Proposition Virgin Money. &ldquo;Our customers rave about their interactions with Redi in our Credit Card app, and we believe that&#39;s because we are creating digital experiences for them that are as useful as they are delightful. Our collaboration with IBM Consulting has been instrumental in helping us unlock the full potential of generative AI, striking the perfect balance between innovation and control.&rdquo;</p>
+
+<p><strong>Westfield Insurance Boosts Developer Productivity by 80% during pilot</strong></p>
+
+<p>&ldquo;As a leading provider of property casualty insurance, we rely on advanced technology to help balance ever-changing regulations and economic uncertainties. Our goal is to meet customer service expectations while navigating these complexities,&rdquo; said Don Hurrle, IT Infrastructure, AI, and Agile Transformation Leader, Westfield Insurance. &ldquo;During an eight-week pilot with IBM, we used watsonx deployed on IBM Cloud to simplify the explanation and documentation of code faster, resulting in an 80%-time reduction for a developer to understand an application. This significant time savings enables our developers to focus on higher-value tasks, improving overall productivity. IBM watsonx Code Assistant for Z also accelerated the understanding of the application by performing analysis, generating reports, and identifying the impact of code changes.&rdquo;<br />
+&nbsp;</p>
+
+<p><em>Statements regarding IBM&rsquo;s future direction and intent are subject to change or withdrawal without notice and represent goals and objectives only.</em></p>
+
+<p><br />
+<strong>About IBM</strong></p>
+
+<p>IBM is a leading provider of global hybrid cloud and AI, and consulting expertise. We help clients in more than 175 countries capitalize on insights from their data, streamline business processes, reduce costs and gain the competitive edge in their industries. More than 4,000 government and corporate entities in critical infrastructure areas such as financial services, telecommunications and healthcare rely on IBM&#39;s hybrid cloud platform and Red Hat OpenShift to affect their digital transformations quickly, efficiently and securely. IBM&#39;s breakthrough innovations in AI, quantum computing, industry-specific cloud solutions and consulting deliver open and flexible options to our clients. All of this is backed by IBM&#39;s long-standing commitment to trust, transparency, responsibility, inclusivity and service. Visit <a href="http://www.ibm.com/">www.ibm.com</a> for more information.</p>
+
+<div>&nbsp;
+<hr align="left" size="1" width="33%" />
+<div id="edn1">
+<p><em><a href="#_ednref1" name="_edn1" title="">[i]</a> IBM. &ldquo;<a href="https://arxiv.org/pdf/2405.04324">Granite Code Models: A Family of Open Foundation Models for Code Intelligence</a>&rdquo;</em></p>
+</div>
+
+<div id="edn2">
+<p><em><a href="#_ednref2" name="_edn2" title="">[ii]</a> IBM. &ldquo;<a href="https://arxiv.org/pdf/2405.04324">Granite Code Models: A Family of Open Foundation Models for Code Intelligence</a>&rdquo;</em></p>
+</div>
+
+<div id="edn3">
+<p><em><a href="#_ednref3" name="_edn3" title="">[iii]</a> IBM. &ldquo;<a href="https://arxiv.org/pdf/2405.04324">Granite Code Models: A Family of Open Foundation Models for Code Intelligence</a>&rdquo;</em></p>
+</div>
+
+<div id="edn4">
+<p><em><a href="#_ednref4" name="_edn4" title="">[iv]</a> For data-centric enterprise workloads, generating SQL from natural language questions is one of the most significant and challenging code generation tasks. On May 14, 2024, IBM Granite-based models achieved the top accuracy and efficiency scores on the BIRD ( (BIg Bench for LaRge-scale Database Grounded Text-to-SQL Evaluation) leaderboard for text-to-SQL generation, demonstrating IBM&#39;s leadership in this critical enterprise use case.</em></p>
+</div>
+
+<div id="edn5">
+<p><em><a href="#_ednref5" name="_edn5" title="">[v]</a> McKinsey. &ldquo;<a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier#business-and-society">The Economic Potential of Generative AI</a>.&rdquo;</em></p>
+</div>
+
+<div id="edn6">
+<p><em><a href="#_ednref6" name="_edn6" title="">[vi]</a> Salesforce. &ldquo;Third Edition State of IT Report.&rdquo;</em></p>
+</div>
+
+<div id="edn7">
+<p><em><a href="#_ednref7" name="_edn7" title="">[vii]</a> IDC: Gary Chen, Jim Mercer. &quot;1 Billion New Logical Applications: More Background.&rdquo;</em></p>
+</div>
+</div>
+</div>
+
+<div class="bx--btn bx--btn--primary wd_subscribe" role="button" tabindex="0" aria-label="Subscribe to email"><a href="subscribe">Subscribe to email</a></div>
+
+
+
+<h4>Release Categories</h4>
+<ul class="wd_layout-inline wd_category_link_list"><li class="wd_category_link"><div class="wd_category_808 wd_parent_"><a href="https://newsroom.ibm.com/press-releases-artificial-intelligence" class="wd_category_808 wd_parent_">Artificial intelligence</a></div></li><li class="wd_category_link"><div class="wd_category_809 wd_parent_"><a href="https://newsroom.ibm.com/press-releases-corporate" class="wd_category_809 wd_parent_">Corporate</a></div></li></ul>
+
+
+
+
+
+<!-- ITEMDATE: 2024-05-21 00:01:00 EDT -->
+
+</div>
+</div><p class="tags">
+Tags:
+<a rel="tag" href="https://newsroom.ibm.com/tag/Generative-AI">Generative AI</a>
+<a rel="tag" href="https://newsroom.ibm.com/tag/watsonx">watsonx</a>
+</p>
+												
+
+											</div><!-- END CONTENT -->
+										</div>
+																				<div class="cds--col-span-3 ibm-mb-3 ibm-mt-5 wd_right_rail_wrapper">
+											<div class="wd_featureboxes_right wd_featureboxes-vertical">
+<div id="wd_featurebox-teaser_1437" class="wd_featurebox_container wd_featurebox-teaser"><div class="wd_featurebox_title">more articles</div><div class="wd_featurebox">
+<div class="wd_standard-teaser">
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33724" class="itemlink"><a href="https://newsroom.ibm.com/Blog-Expand-hybrid-cloud-and-AI-adoption-with-IBM-Power-Virtual-Server-to-boost-competitive-advantage">Expand hybrid cloud and AI adoption with IBM Power Virtual Server to boost competitive advantage</a></a></div></div>
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33723" class="itemlink"><a href="https://newsroom.ibm.com/IBM-to-drive-enterprise-ready-AI-adoption-at-scale-in-collaboration-with-NVIDIA">IBM to drive enterprise-ready AI adoption at scale in collaboration with NVIDIA</a></a></div></div>
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33722" class="itemlink"><a href="https://www.ibm.com/blog/b7-eu-ai-act/" target=”_blank”>AI will change the world—the terms are up to us</a></a></div></div>
+
+</div>
+</div></div></div>
+											 
+																																	<div class="wd_sidebar_search">
+												<!-- <h4>Categories</h4>
+												<form action="https://newsroom.ibm.com/announcements" method="get" name="wd_sidebar_search" id="wd_sidebar_search">
+												<ul class="tagsFilter-tags">
+
+
+<li class="tagsFilter-tags-item wd_cat-808" role="button" tabindex="0" aria-label="Artificial intelligence">
+	<a href="#" data-url="808" class="vsubnav">Artificial intelligence</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-809" role="button" tabindex="0" aria-label="Corporate">
+	<a href="#" data-url="809" class="vsubnav">Corporate</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-811" role="button" tabindex="0" aria-label="Hybrid cloud">
+	<a href="#" data-url="811" class="vsubnav">Hybrid cloud</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-812" role="button" tabindex="0" aria-label="Research and innovation">
+	<a href="#" data-url="812" class="vsubnav">Research and innovation</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-810" role="button" tabindex="0" aria-label="Social impact">
+	<a href="#" data-url="810" class="vsubnav">Social impact</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-813" role="button" tabindex="0" aria-label="Tag">
+	<a href="#" data-url="813" class="vsubnav">Tag</a>
+</li>
+
+
+
+</ul>
+
+
+																								<div class="wd_year_wrap">
+												<label for="wd_year">Year</label>
+												<select id="wd_year" name="year"><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option></select>												</div>
+																								<input type="hidden" name="category" value="">
+												<button type="submit" class="bx--btn bx--btn--primary" id="wd_submit_sidebar_search">Submit</button>													
+												</form>																 -->
+											</div>
+
+																							<div class="bx--btn bx--btn--tertiary ibm-mt-4 wd_subscribe" role="button" tabindex="0" aria-label="Subscribe to email">
+													<a href="subscribe">Subscribe to email</a>
+												</div>
+											
+																																	<!--<div id="wd_right_assets">
+												<h4>Additional Assets</h4>
+											</div>-->
+																																</div>
+																			</div>
+								</section>
+																								                                								
+																															</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div><!-- IBM Content wrapper -->
+	</div><!-- IBM top -->
+	<script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/footer.min.js"></script>
+	<!-- <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/search-with-typeahead.rtl.min.js"></script> -->
+		<!-- FOOTER_BEGIN -->
+		<dds-footer-container></dds-footer-container>
+		<!-- FOOTER_END -->
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="js/wd_js.js"></script>
+	<script>
+    $(document).ready(function() {
+        $('.wd_subscribe a').addClass('wd_fancybox').attr('href', function(i, href) {
+            return href + '?pagetemplate=modal'
+        });
+        $('.wd_fancybox').fancybox({
+            type:'ajax',
+            width: 800,
+            height: 800
+            //autoSize: false,
+            //autoScale: false
+        });
+    });
+    </script>
+	<!-- START CUSTOM TOOLBAR -->
+		<div class="hidden">
+	<li class="wd_pageshare wd_tool wd_tool-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnewsroom.ibm.com%2F2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source%2C-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale" class="wd_sharelink" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-1" class="at-icon at-icon-facebook" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;"><title id="at-svg-facebook-1">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></a></li>
+	<li class="wd_pageshare wd_tool wd_tool-twitter"><a href="https://twitter.com/share?url=http%3A%2F%2Fnewsroom.ibm.com%2F2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source%2C-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale" class="wd_sharelink" target="_blank">
+		<svg id="icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="at-svg-twitter-2" class="at-icon at-icon-twitter" viewBox="0 0 32 32">
+			<title id="at-svg-twitter-2">Twitter</title>
+		  <defs>
+		    <style>
+		      .cls-1 {
+		        fill: none;
+		      }
+		    </style>
+		  </defs>
+		  <path d="m18.2342,14.1624l8.7424-10.1624h-2.0717l-7.591,8.8238-6.0629-8.8238h-6.9929l9.1684,13.3432-9.1684,10.6568h2.0718l8.0163-9.3183,6.4029,9.3183h6.9929l-9.5083-13.8376h.0005Zm-2.8376,3.2984l-.9289-1.3287L7.0763,5.5596h3.1822l5.9649,8.5323.9289,1.3287,7.7536,11.0907h-3.1822l-6.3272-9.05v-.0005Z"/>
+		  <rect id="_Transparent_Rectangle_" data-name="&amp;lt;Transparent Rectangle&amp;gt;" class="cls-1" width="32" height="32"/>
+		</svg>
+
+	</a></li>
+	<li class="wd_pageshare wd_tool wd_tool-linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fnewsroom.ibm.com%2F2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source%2C-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale&title=All press releases&summary=&source=http%3A%2F%2Fnewsroom.ibm.com" class="wd_sharelink" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-linkedin-3" class="at-icon at-icon-linkedin" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;"><title id="at-svg-linkedin-3">LinkedIn</title><g><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z" fill-rule="evenodd"></path></g></svg></a></li>
+	</div>
+
+	<script type="text/javascript">
+	$('.wd_pageshare.wd_tool-linkedin').prependTo('ul.wd_tools');
+	$('.wd_pageshare.wd_tool-twitter').prependTo('ul.wd_tools');
+	$('.wd_pageshare.wd_tool-facebook').prependTo('ul.wd_tools');
+	var itemTitle = '';
+		var itemTitle = $('.wd_newsfeed_releases-detail > .wd_title').text();
+		var twitterHref = $('.wd_tool-twitter .wd_tool_icon a').attr('href');
+	if(itemTitle == '') itemTitle = "All press releases";
+
+		itemTitle = encodeURIComponent(itemTitle);
+
+	$('.wd_tool-twitter .wd_tool_icon a').attr('href', twitterHref+'&text='+itemTitle);
+	$(document).ready(function(){
+		$('.wd_sharelink').click(function(event) {
+			event.preventDefault();
+			window.open($(this).attr("href"), "popupWindow", "width=1100,height=700,scrollbars=yes");
+		});
+	});
+	function escapeHtml(string){
+		var entityMap = {
+			"&": "&amp;",
+			"<": "&lt;",
+			">": "&gt;",
+			'"': "&quot;",
+			"'": "&#39;",
+			"/": "&#x2F;",
+			"`": "&#x60;",
+			"=": "&#x3D;"
+		};
+		return String(string).replace(/[&<>"'`=\/]/g, function(s){
+			return entityMap[s];
+		});
+	}
+
+	</script>
+	<!-- END CUSTOM TOOLBAR -->
+
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script>
+<!-- end spin_special_output(body_end) -->
+<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'88750738de0a453f',t:'MTcxNjI5OTM0OS45NDMwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

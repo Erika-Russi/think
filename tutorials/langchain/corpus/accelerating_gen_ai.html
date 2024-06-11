@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us">
+<head>
+<!-- begin spin_special_output(head_start) -->
+<style type="text/css" wd_script_id="featureboxes_style" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA==">
+		.wd_featurebox_icon {
+			display: inline;
+		}
+		.wd_featurebox_icon img {
+			vertical-align: middle;
+		}
+		div.wd_featurebox_group div.wd_tabs_wrapper {
+			border: none;
+			border-bottom: 1px solid #E1E1E1;
+			padding: 0 0 5px 0;
+		}
+		div.wd_featurebox_group div.wd_featurebox {
+			border: none;
+			padding: 8px 0 0 0;
+		}
+		div.wd_featurebox_group li.wd_tab {
+			float: none;
+			color: #666666;
+		}
+		div.wd_featurebox_group li.wd_tab-active {
+			border: none;
+			background-color: transparent;
+			color: #000000;
+			font-weight: bold;
+		}
+		div.wd_featurebox_group li.wd_tab-inactive {
+			cursor: auto;
+		}
+	</style>
+<style type="text/css" wd_script_id="search_form_style" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA==">
+		.wd_search_form .wd_input_datepicker {
+			margin-right: 2px;
+		}
+		.wd_search_type_checkbox {
+			margin-left: 20px;
+		}
+		</style>
+<script type="text/javascript" src="js/jquery-webdriver.js" wd_script_id="jquery-webdriver.js" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA=="></script>
+<script type="text/javascript" src="js/webdriver.js" wd_script_id="webdriver.js" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA=="></script>
+<script type="text/javascript" wd_script_id="search_form_script" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA==">
+			function wd_toggle_search_form(link, advanced) {
+				var $ = webDriver.jQuery;
+				var $container = $(link).closest(".wd_search_form_container");
+				var basic_form = $container.find(".wd_search_form_basic");
+				var basic_query = basic_form.find('input[name="query"]');
+				var advanced_form = $container.find(".wd_search_form_advanced");
+				var advanced_query = advanced_form.find('input[name="query"]');
+
+				if (advanced) {
+					advanced_query.val(basic_query.val());
+					advanced_form.show();
+					basic_form.hide();
+				} else {
+					basic_query.val(advanced_query.val());
+					basic_form.show();
+					advanced_form.hide();
+				}
+			}
+
+			function wd_toggle_search_type_checkboxes(radio) {
+				var $ = webDriver.jQuery;
+				var $radio = $(radio);
+				var all = $radio.val() == "All" ? $radio.is(":checked") : !$radio.is(":checked");
+				var $checkboxes = $radio.closest(".wd_form_field").find(".wd_search_type_checkbox");
+				$checkboxes.find('input[type="checkbox"]').prop("disabled", all);
+				$checkboxes.toggle(!all);
+			}
+
+			webDriver.jQuery(function ($) {
+				$('.wd_search_type_radio input[type="radio"]').each(function() {wd_toggle_search_type_checkboxes(this);});
+			});
+		</script>
+<script type="text/javascript" wd_script_id="view_printable_script" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA==">
+	function view_printable() {
+		var loc = window.location;
+		var sep = (loc.search == "") ? "?" : "&";
+		var url = loc.protocol+"//"+loc.host+loc.pathname+loc.search+sep+"printable"+loc.hash;
+		window.open(url, "_blank", "");
+	}
+</script>
+<link href="thirdparty/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+<style type="text/css" wd_script_id="toolbar_style" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA==">
+			div.wd_toolbar {
+				border-top: 1px solid #cccccc;
+				border-bottom: 1px solid #cccccc;
+				margin: 15px 0px 15px 0px;
+				padding: 5px;
+				line-height: 1;
+			}
+			div.wd_toolbar-page {
+				clear: both;
+			}
+			div.wd_toolbar ul.wd_tools {
+				display: inline-block;
+				width: 100%;
+				margin: 0;
+				padding: 5px 0;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool {
+				display: block;
+				list-style-type: none;
+				margin-right: 5px;
+				padding: 0;
+				float: right;
+			}
+			span.wd_tool_icon > a:link,
+			span.wd_tool_icon > a:visited {
+				border-radius: 2px;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				box-sizing: border-box;
+				margin: 0;
+				padding: 7px;
+				font-size: 16px;
+				line-height: 1;
+				text-align: center;
+				color: #ffffff;
+				background-color: #767676;
+			} 
+			span.wd_tool_icon > a:hover {
+				color: #ffffff;
+				background-color: #666666;
+				text-decoration: none;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool-addthis {
+				float: left;
+			}
+		</style>
+<style type="text/css" wd_script_id="template_list_inline_style" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA==">
+						ul.wd_layout-inline {
+							display: inline-block;
+							list-style: none;
+							padding: 0;
+							margin: 0;
+						}
+						ul.wd_layout-inline li {
+							display: inline-block;
+							padding: 0;
+							margin: 0 0 0 1em;
+						}
+					</style>
+
+<!-- end spin_special_output(head_start) -->
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<meta name="rights" content="© Copyright IBM Corporation 2024">
+	<meta name="referrer" content="no-referrer-when-downgrade">
+	<script>cpp = {"path":"\/cloud\/ajax\/product\/{product}"}</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+	<title>How IBM Cloud is Accelerating Business Outcomes with Gen AI</title>
+	
+ <meta name="keywords" content="IBM, IBM Cloud, Generative AI, high performance computing, HPC, AI, David Tan, Vela, InstructLab, Rohit Badlaney, Joe Fernandes, " />
+ <meta name="description" content="IBM Cloud is helping our clients boost competitiveness with the combined power of our hybrid cloud and AI stack. Our enterprise cloud platform is built for even the most regulated industries, and coupled with our heritage in high performance computing (HPC), we are uniquely positioned to support the AI infrastructure needed for performance intensive workloads. We’re working on several new solutions and tailor-made collaborations to help enable a seamless and secure integration of AI." />
+ <meta name="twitter:card" content="summary" />
+ <meta name="twitter:title" content="How IBM Cloud is Accelerating Business Outcomes with Gen AI" />
+ <meta name="twitter:description" content="IBM Cloud is helping our clients boost competitiveness with the combined power of our hybrid cloud and AI stack. " />
+ <meta name="twitter:image" content="https://newsroom.ibm.com/image/Cloud-Gen_AI_Social.jpg" />
+ <meta property="og:site_name" content="IBM Newsroom" />
+ <meta property="og:url" content="https://newsroom.ibm.com/Blog-How-IBM-Cloud-is-Accelerating-Business-Outcomes-with-Gen-AI" />
+ <meta property="og:title" content="How IBM Cloud is Accelerating Business Outcomes with Gen AI" />
+ <meta property="og:description" content="IBM Cloud is helping our clients boost competitiveness with the combined power of our hybrid cloud and AI stack. " />
+ <meta name="image" property="og:image" content="https://newsroom.ibm.com/image/Cloud-Gen_AI_Social.jpg" />
+	<link rel="alternate" hreflang="en-us" href="https://www.ibm.com/us-en/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.ibm.com" />
+    
+	<!-- <link rel="stylesheet" href="css/www.css" media="all">
+	<link rel="stylesheet" href="css/styles.chunk.css">
+	<link rel="stylesheet" href="css/expertise.css" media="all">
+	<link rel="stylesheet" href="css/forms.css" media="all">
+	<link rel="stylesheet" href="css/syntaxhighlighter.css" media="all">
+	<link rel="stylesheet" href="css/tables.css" media="all">
+	<link rel="stylesheet" href="css/grid-fluid.css" media="all">
+	<link rel="stylesheet" href="css/css_Cr98Co91qznllKC9Wy5J_7gpdfQEqV0SybQw-ck_JqE__iOLGJsklPd7.css" media="all"> -->
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/styles.chunk.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/wdcontent.css">
+	<link rel="alternate" href="https://newsroom.ibm.com/announcements?pagetemplate=rss" type="application/rss+xml" title="IBM - Announcements">			<!--<script src="https://1.www.s81c.com/common/v18/js/www.js"></script>-->
+	<script type="module">
+      //import 'https://1.www.s81c.com/common/carbon-for-ibm-dotcom/latest/ibmdotcom-web-components-dotcom-shell.min.js';
+	</script>
+	<!--[if lte IE 8]>
+	<script src="//1.cms.s81c.com/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA__iOLGJsklPd7s--QzuQq7ItMADkdM4v3PHQXFA_udVU.js"></script>
+	<![endif]-->
+	<!-- <script src="js/js_dUs2LcFOOCh7KM9XOxYjXu0rvvyAosRovLTET5mKHdc__iOLGJsklPd7s-.js"></script> -->
+	<!-- <script src="js/www.js"></script> -->
+	<script>
+		//IBMCore.common.config.masthead.enabled = false;
+		//IBMCore.common.util.config.set({
+        //"masthead": {
+        //  "type": "alternate"
+        //}
+     // });
+	</script>
+	<script type = "text/javascript">
+		window._ibmAnalytics = {
+		"settings": {
+			"name": "Newsroom",
+			"tealiumProfileName": "ibm-web-app"
+		}
+	};
+	digitalData = {
+		"page": {
+			"pageInfo": {
+				"ibm": {
+				"siteId": "IBM_" + _ibmAnalytics.settings.name,
+				}
+			},
+			"category": {
+				"primaryCategory": "PC190"
+			}
+		}
+	};
+	
+	</script>
+	<script src="//1.www.s81c.com/common/stats/ibm-common.js" defer=""></script>
+			<!-- <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/v2.8.0/masthead.min.js"></script> -->
+
+<!-- begin spin_special_output(head_end) -->
+<link href="css/wd_wcag.css" type="text/css" rel="stylesheet" wd_script_id="wd_wcag.css">
+<script type="text/javascript" src="js/jquery.fancybox.min.js" wd_script_id="jquery.fancybox.min.js" nonce="MDhkNGM5N2ZiOTBkMWJkYmRjOTAzMzUwYTJjNzQ2NzlkNDFmOWFhOA=="></script>
+<link rel="canonical" href="https://newsroom.ibm.com/Blog-How-IBM-Cloud-is-Accelerating-Business-Outcomes-with-Gen-AI" />
+<!-- end spin_special_output(head_end) -->
+</head>
+<body class="wd_pageid_34223 wd_item_page wd_item_1740 wd_featured_item_page ibm-type">
+	<div id="ibm-top" class="ibm-landing-page">
+		<!-- MASTHEAD_BEGIN -->
+		<!-- <c4d-masthead-container data-endpoint="/common/carbon-for-ibm-dotcom/translations/masthead-footer/v2.1"></c4d-masthead-container> -->
+		<div class="bx--masthead__l0">
+			<header role="banner" class="bx--header">
+				<a id="link" part="link" class="bx--header__name" href="https://www.ibm.com/" aria-label="IBM logo"><svg focusable="false" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" width="58px" height="23px" viewBox="0 0 58 23"><!----><title>IBM Logo</title><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="ibm-8-bar-logo--h15-copy" fill="#161616"><path d="M58,21.4666667 L58,23 L50.3684211,23 L50.3684211,21.4666667 L58,21.4666667 Z M39.6842105,21.4666667 L39.6842105,23 L32.0526316,23 L32.0526316,21.4666667 L39.6842105,21.4666667 Z M45.6385329,21.4666667 L45.0245693,23 L44.41871,21.4666667 L45.6385329,21.4666667 Z M28.5421053,21.4666667 C27.4471432,22.4188667 26.0029202,23 24.3905263,23 L24.3905263,23 L12.2105263,23 L12.2105263,21.4666667 Z M10.6842105,21.4666667 L10.6842105,23 L0,23 L0,21.4666667 L10.6842105,21.4666667 Z M39.6842105,18.4 L39.6842105,19.9333333 L32.0526316,19.9333333 L32.0526316,18.4 L39.6842105,18.4 Z M46.8318522,18.4 L46.2377311,19.9333333 L43.8212353,19.9333333 L43.2226426,18.4 L46.8318522,18.4 Z M30.0684211,18.4 C29.9306437,18.9451697 29.7105614,19.4599515 29.4273684,19.9333333 L29.4273684,19.9333333 L12.2105263,19.9333333 L12.2105263,18.4 Z M10.6842105,18.4 L10.6842105,19.9333333 L0,19.9333333 L0,18.4 L10.6842105,18.4 Z M58,18.4 L58,19.9333333 L50.3684211,19.9333333 L50.3684211,18.4 L58,18.4 Z M54.9473684,15.3333333 L54.9473684,16.8666667 L50.3684211,16.8666667 L50.3684211,15.3333333 L54.9473684,15.3333333 Z M39.6842105,15.3333333 L39.6842105,16.8666667 L35.1052632,16.8666667 L35.1052632,15.3333333 L39.6842105,15.3333333 Z M48.0292704,15.3333333 L47.4295831,16.8666667 L42.6233978,16.8666667 L42.019006,15.3333333 L48.0292704,15.3333333 Z M29.8547368,15.3333333 C29.991899,15.8221879 30.0684211,16.3357152 30.0684211,16.8666667 L30.0684211,16.8666667 L24.4210526,16.8666667 L24.4210526,15.3333333 Z M19.8421053,15.3333333 L19.8421053,16.8666667 L15.2631579,16.8666667 L15.2631579,15.3333333 L19.8421053,15.3333333 Z M7.63157895,15.3333333 L7.63157895,16.8666667 L3.05263158,16.8666667 L3.05263158,15.3333333 L7.63157895,15.3333333 Z M54.9473684,12.2666667 L54.9473684,13.8 L50.3684211,13.8 L50.3684211,12.2666667 L54.9473684,12.2666667 Z M39.6842105,12.2666667 L39.6842105,13.8 L35.1052632,13.8 L35.1052632,12.2666667 L39.6842105,12.2666667 Z M49.2252679,12.2666667 L48.6284686,13.8 L41.4089474,13.8 L40.8168134,12.2666667 L49.2252679,12.2666667 Z M27.9773684,12.2666667 C28.5037637,12.6994848 28.9570701,13.2181697 29.3052632,13.8 L29.3052632,13.8 L15.2631579,13.8 L15.2631579,12.2666667 Z M7.63157895,12.2666667 L7.63157895,13.8 L3.05263158,13.8 L3.05263158,12.2666667 L7.63157895,12.2666667 Z M44.5987396,9.2 L45.0263158,10.4393515 L45.4535426,9.2 L54.9473684,9.2 L54.9473684,10.7333333 L50.3684211,10.7333333 L50.3684211,9.32433939 L49.8494737,10.7333333 L40.1878947,10.7333333 L39.6842105,9.3242 L39.6842105,10.7333333 L35.1052632,10.7333333 L35.1052632,9.2 L44.5987396,9.2 Z M7.63157895,9.2 L7.63157895,10.7333333 L3.05263158,10.7333333 L3.05263158,9.2 L7.63157895,9.2 Z M29.3052632,9.2 C28.9570701,9.7818303 28.5037637,10.3003758 27.9773684,10.7333333 L27.9773684,10.7333333 L15.2631579,10.7333333 L15.2631579,9.2 Z M54.9473684,6.13333333 L54.9473684,7.66666667 L45.9831118,7.66666667 L46.5234001,6.13333333 L54.9473684,6.13333333 Z M43.534302,6.13333333 L44.0745993,7.66666667 L35.1052632,7.66666667 L35.1052632,6.13333333 L43.534302,6.13333333 Z M30.0684211,6.13333333 C30.0684211,6.66414545 29.991899,7.17767273 29.8547368,7.66666667 L29.8547368,7.66666667 L24.4210526,7.66666667 L24.4210526,6.13333333 Z M19.8421053,6.13333333 L19.8421053,7.66666667 L15.2631579,7.66666667 L15.2631579,6.13333333 L19.8421053,6.13333333 Z M7.63157895,6.13333333 L7.63157895,7.66666667 L3.05263158,7.66666667 L3.05263158,6.13333333 L7.63157895,6.13333333 Z M42.4774196,3.06666667 L43.0079113,4.6 L32.0527757,4.6 L32.0526316,3.06666667 L42.4774196,3.06666667 Z M58,3.06666667 L58,4.6 L47.0390632,4.6 L47.5903678,3.06666667 L58,3.06666667 Z M29.4273684,3.06666667 C29.7105614,3.54004848 29.9306437,4.0548303 30.0684211,4.6 L30.0684211,4.6 L12.2105263,4.6 L12.2105263,3.06666667 Z M10.6842105,3.06666667 L10.6842105,4.6 L0,4.6 L0,3.06666667 L10.6842105,3.06666667 Z M41.4056725,0 L41.9462722,1.53333333 L32.05278,1.53333333 L32.0526316,0 L41.4056725,0 Z M58,0 L58,1.53333333 L48.1188427,1.53333333 L48.6466706,0 L58,0 Z M24.3905263,0 C25.9912083,0 27.4472798,0.581133333 28.5421053,1.53333333 L28.5421053,1.53333333 L12.2105263,1.53333333 L12.2105263,0 Z M10.6842105,0 L10.6842105,1.53333333 L0,1.53333333 L0,0 L10.6842105,0 Z" id="Combined-Shape"></path></g></g></svg></a>				
+				<!-- <dds-search-with-typeahead></search-with-typeahead> -->
+				<!-- <a role="menuitem" tabindex="0" href="javascript:void 0" aria-haspopup="menu" class="bx--header__menu-item bx--header__menu-title" aria-expanded="false" aria-label="User profile">
+        			<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32"><path d="M16 4a5 5 0 11-5 5 5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0016 2zM26 30H24V25a5 5 0 00-5-5H13a5 5 0 00-5 5v5H6V25a7 7 0 017-7h6a7 7 0 017 7z"></path></svg>
+    			</a>
+				<ul role="menu" class="bx--header__menu">
+					<li><a part="link" role="menuitem" tabindex="0" class="bx--header__menu-item" href="https://myibm.ibm.com/?lnk=mmi"> <span part="title" class="bx--text-truncate--end"></span> </a></li>
+					<li><a part="link" role="menuitem" tabindex="0" class="bx--header__menu-item" href="https://login.ibm.com/oidc/endpoint/default/authorize?redirect_uri=https%3A%2F%2Fmyibm.ibm.com%2FOIDCHandler.html&amp;response_type=token&amp;client_id=v18LoginProdCI&amp;scope=openid&amp;state=http%3A%2F%2Fstage.mediaroom.com%2Fibmnewsroom%2Fannouncements&amp;nonce=8675309"> <span part="title" class="bx--text-truncate--end"></span> </a></li>
+				</ul>-->
+				<div class="bx--header__search">
+					<div class="wd_search_form_container"><form name="basic_search" method="get" action="https://newsroom.ibm.com/index.php?s=20322" class="wd_search_form wd_search_form_basic"><input type="hidden" name="s" value="search_results" /><input type="text" name="query" value="" size="32" placeholder="Search the IBM Newsroom" title="Search the IBM Newsroom" /> <a href="#" onclick="webDriver.jQuery(this).closest('form').submit(); return false;"><button role="button" value="Submit" type="submit"><svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32"><title>Submit</title><path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"></path></svg></button></a></form>
+</div>          		</div>
+				<div class="bx--header__search--actions">
+					<button type="button" part="open-button" class="bx--header__action bx--header__search--search" aria-label="Open IBM search field">
+						<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32">
+							<path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"></path>
+						</svg>
+					</button>
+					<button type="button" part="close-button" class="bx--header__action bx--header__search--close" aria-label="Close">
+						<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32">
+							<path d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"></path>
+						</svg>
+					</button>
+				</div>				
+			</header>
+		</div>
+		<dds-masthead-container></dds-masthead-container>
+		<!-- MASTHEAD_END -->
+		<div id="ibm-content-wrapper">		
+			<!-- <header role="banner" class="bx--header wd_nav_header">
+				<a class="bx--header__name pl-header-text" href="index.php"><span class="bx--header__name--prefix">IBM&nbsp;</span>Newsroom</a>
+				<div class="ibm-divider"></div>
+				<button data-autoid="dds--masthead-default-sidenav__l0-menu" aria-label="Open menu" class="bx--header__action bx--header__menu-trigger bx--header__menu-toggle bx--header__menu-toggle__hidden" title="Open menu" type="button">
+					<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+						<path d="M2 14.8H18V16H2zM2 11.2H18V12.399999999999999H2zM2 7.6H18V8.799999999999999H2zM2 4H18V5.2H2z"></path>
+					</svg>
+				</button>
+				<nav role="navigation">
+					<div class="ibm-sitenav-menu-list">
+											</div>
+				</nav>
+			</header> -->
+			<header role="banner" class="wd_nav_header">
+				<div class="cds--css-grid">
+					<div class="cds--col-span-16">
+						<a class="bx--header__name pl-header-text" href="index.php"><span class="bx--header__name--prefix">IBM&nbsp;</span>Newsroom</a>
+						<button data-autoid="dds--masthead-default-sidenav__l0-menu" aria-label="Open menu" class="bx--header__action bx--header__menu-trigger bx--header__menu-toggle bx--header__menu-toggle__hidden" title="Open menu" type="button">
+							<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+								<path d="M2 14.8H18V16H2zM2 11.2H18V12.399999999999999H2zM2 7.6H18V8.799999999999999H2zM2 4H18V5.2H2z"></path>
+							</svg>
+						</button>
+						<nav role="navigation">
+							<div class="ibm-sitenav-menu-list">
+								<ul role="menubar">
+	<li class="ibm-haschildlist active" role="presentation">
+	<button role="menuitem" tabindex="0">News</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/announcements" tabindex="-1" target="_self">All press releases</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-artificial-intelligence" tabindex="-1" target="_self">Artificial intelligence</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-hybrid-cloud" tabindex="-1" target="_self">Hybrid cloud</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-research-and-innovation" tabindex="-1" target="_self">Research and innovation</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-news-corporate" tabindex="-1" target="_self">Corporate</a></li>
+	<li role="presentation"><a role="menuitem" href="latest-new-social-impact" tabindex="-1" target="_self">Social impact</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/mergers-and-acquisitions" tabindex="-1" target="_self">Mergers & acquisitions</a></li>
+</ul>
+	</li>
+	<li class="ibm-haschildlist" role="presentation">
+	<button role="menuitem" tabindex="0">Media resources</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/media-center" tabindex="-1" target="_self">Asset gallery</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/contacts" tabindex="-1" target="_self">Media contacts</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/global-news-room" tabindex="-1" target="_self">Global newsrooms</a></li>
+</ul>
+	</li>
+	<li class="ibm-haschildlist" role="presentation">
+	<button role="menuitem" tabindex="0">Inside IBM</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/executive-bios" tabindex="-1" target="_self">Leadership</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/about-IBM" tabindex="-1" target="_self">About IBM</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/investor" tabindex="-1" target="_self">Investor relations</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/annualreport/" tabindex="-1" target="_self">Annual report</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/reports/analyst" tabindex="-1" target="_self">Analyst reports</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/topics/corporate-social-responsibility" tabindex="-1" target="_self">CSR</a></li>
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/policy/about-new/?utm_content=SRCWW&p1=Search&p4=43700066458429724&p5=e&gad_source=1&gclid=Cj0KCQjwwYSwBhDcARIsAOyL0fgNi85QEoribCI6MFuUy-yCt3JoHxZzfD-BV-lfgSGL4OEf4DnlnqUaArV4EALw_wcB&gclsrc=aw.ds" tabindex="-1" target="_self">IBM policy</a></li>
+	<li role="presentation"><a role="menuitem" href="https://newsroom.ibm.com/awards" tabindex="-1" target="_self">Awards</a></li>
+</ul>
+	</li>
+	<li class="ibm-haschildlist" role="presentation">
+	<button role="menuitem" tabindex="0">Blog</button>
+	<ul role="menu level2">
+	<li role="presentation"><a role="menuitem" href="https://www.ibm.com/blog/" tabindex="-1" target="_self">IBM blog</a></li>
+	<li role="presentation"><a role="menuitem" href="https://research.ibm.com/blog" tabindex="-1" target="_self">IBM Research blog</a></li>
+	<li role="presentation"><a role="menuitem" href="https://securityintelligence.com/" tabindex="-1" target="_self">securityintelligence.com</a></li>
+</ul>
+	</li>
+	<li role="presentation"><a role="button" href="subscribe?pagetemplate=modal" class="wd_fancybox">Subscribe</a></li>
+</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+			<main role="main" aria-label="Experience IBM">
+								<div id="ibm-pcon">
+					<div id="ibm-content">
+						<div id="ibm-content-body" class="ibm-padding-top-0">
+							<div id="ibm-content-main">
+								
+																																								
+								
+								
+																			
+								 
+																<section>
+									<div class="cds--css-grid ibm-pt-6 ibm-mt-6 ibm-pb-3 wd_header_container">
+										<div class="cds--col-span-16 think-content-row">
+											<h1>Latest News</h1>
+										</div>
+									</div>												
+									<!-- <div class="cds--css-grid ibm-pt-2">
+										<div id="wd_featured_item" class="cds--col-span-16 ibm-pb-5">
+																							<img class="wd_featured_image" src="" alt="" />
+																					</div>
+									</div> -->
+									<div class="cds--css-grid ibm-pt-2">
+										<!-- <div class="cds--col-span-1 ibm-mb-3" id="wd_page_tools"></div> -->
+										<div class="cds--col-span-12 ibm-mb-3">
+											<!-- BEGIN CONTENT-WRAPPER -->	
+											<div class="wd_content">
+																								<div id="wd_printable_content">
+<div class="wd_articles-detail">
+<div id="wd_move_content_up">
+<h1 class="wd_title wd_language_left">How IBM Cloud is Accelerating Business Outcomes with Gen AI
+<div class="wd_subtitle">
+<p>IBM is Expanding its Accelerated Computing Platform with NVIDIA and Red Hat to Support Generative AI Growth</p>
+<p>Automated Deployable Architectures for watsonx Provide Quick, Easy, and Secured Consumption for Clients </p>
+</div>
+</h1>
+
+<div class="wd_author_info">
+By Rohit  Badlaney | General Manager for IBM Cloud Product and Industry Platforms
+</div>
+
+<div class="wd_date">May 21, 2024</div>
+
+			<div class="wd_captioned_image" style="float: left;  margin: 10px 10px 10px 0px; width: 1920px;">
+				<div class="wd_image"><img src="/image/Cloud-Gen_AI_Banner.jpg" border="0"/></div>
+				
+			</div>
+		
+</div>
+<div class="wd_toolbar wd_toolbar-detail"><ul class="wd_tools"><li class="wd_tool wd_tool-print"><span class="wd_tool_icon"><a onclick="view_printable(); return false;" rel="nofollow" href="#print" title="print"><span class="fa fa-print"></span></a></span></li><li class="wd_tool wd_tool-email"><span class="wd_tool_icon"><a onclick="window.location.href = 'mailto:?subject=How%20IBM%20Cloud%20is%20Accelerating%20Business%20Outcomes%20with%20Gen%20AI&amp;body='+encodeURIComponent(window.location.href);return false;" href="#email" title="email"><span class="fa fa-envelope"></span></a></span></li><li class="wd_tool wd_tool-rss"><span class="wd_tool_icon"><a href="https://newsroom.ibm.com/index.php?s=20324&amp;rsspage=34223" title="rss"><span class="fa fa-rss"></span></a></span></li></ul></div>
+<div class="wd_summary"><p>Enterprises across industries are constantly exploring new ways that artificial intelligence (AI) can support business innovation and growth. According to research from IBM, the majority of...</p></div>
+
+<div class="wd_body"><p>Enterprises across industries are constantly exploring new ways that artificial intelligence (AI) can support business innovation and growth. According to research from <a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/ceo-generative-ai/ceo-ai-open-innovation" target="_blank">IBM,</a> the majority of executives say their organization needs to quickly adopt <a href="https://www.ibm.com/think/topics/artificial-general-intelligence" target="_blank">generative AI</a> (Gen AI) to accelerate innovation. However, only 39 percent of organizations are currently implementing or operating Gen AI for innovation and research. Many organizations lack the infrastructure and skills to successfully manage the data and deployment challenges that come with these compute intensive workloads.</p>
+
+<p>IBM Cloud is helping our clients boost competitiveness with the combined power of our <a href="https://www.ibm.com/topics/hybrid-cloud" target="_blank">hybrid cloud</a> and <a href="https://www.ibm.com/topics/artificial-intelligence" target="_blank">AI</a> stack. Our enterprise cloud platform is built for even the most regulated industries, and coupled with our heritage in <a href="https://www.ibm.com/topics/hpc" target="_blank">high performance computing (HPC)</a>, we are uniquely positioned to support the AI infrastructure needed for performance intensive workloads. We&rsquo;re working on several new solutions and tailor-made collaborations to help enable a seamless and secure integration of AI.</p>
+
+<p><strong>David Tan, CTO, CrushBank:</strong></p>
+
+<p>&ldquo;For CrushBank, it&#39;s critical that we deliver on the promise of excellent customer experience. The combined power of cloud and AI has been revolutionary in this area. By leveraging watsonx on IBM Cloud for our AI Knowledge Management platform, our agents can serve our customers faster and more effectively - decreasing total time to resolution by 45 percent. Working with IBM has also helped us reduce IT complexity, while helping to ensure we are meeting our security and compliance goals.&quot;</p>
+
+<p><strong>Performance Intensive Computing Momentum: Training and Executing AI Models</strong></p>
+
+<p>Over the past couple of years, IBM has announced several offerings to support training and inferencing generative AI models. IBM Research introduced <a href="https://research.ibm.com/blog/AI-supercomputer-Vela-GPU-cluster" target="_blank">Vela</a>, IBM&rsquo;s first AI-optimized, cloud-native supercomputer hosted on IBM Cloud, using NVIDIA A100 Tensor Core GPUs. Vela was designed to scale up on-demand and readily deploy similar infrastructure into IBM Cloud data centers, allowing IBM to collaborate with partners to train generative AI models. Over the last year Vela&rsquo;s primary mission was to train IBM&rsquo;s Granite models and drive AI development. Last year, IBM also announced the availability of NVIDIA GPU offerings (NVIDIA A100 Tensor Core) on IBM Cloud which clients are using for inferencing on enterprise-class foundation models via watsonx services or as GPUaaS for their specific needs.</p>
+
+<p>We&rsquo;re also working with IBM Research and Red Hat on several initiatives that will support generative AI implementation. The IBM Cloud&rsquo;s GPU Infrastructure is being used to train <a href="https://newsroom.ibm.com/2023-09-28-IBM-Announces-Availability-of-watsonx-Granite-Model-Series,-Client-Protections-for-IBM-watsonx-Models" target="_blank">watsonx Granite models</a> and support <a href="https://github.com/instructlab/instructlab?tab=readme-ov-file#welcome-to-the-instructlab-cli" target="_blank">InstructLab</a>, an open source AI project that facilitates contributions to Large Language Models (LLMs). Granite is IBM&#39;s flagship series of LLM foundation models that are trained on an enterprise&rsquo;s trusted data spanning internet, academic, code, legal and finance. IBM Cloud will also be adding support for&nbsp;<a href="https://www.redhat.com/en/about/press-releases/red-hat-delivers-accessible-open-source-generative-ai-innovation-red-hat-enterprise-linux-ai" target="_blank">Red Hat Enterprise Linux AI (RHEL AI)</a> and Red Hat&nbsp;OpenShift AI platforms that enable users to develop, test and deploy Gen AI models more seamlessly.</p>
+
+<p><strong>Joe Fernandes, vice president and general manager, GenAI Foundation Model Platforms, Red Hat:</strong></p>
+
+<p>&ldquo;More users in more organizations need to be able to access the innovation of GenAI, which means lowering the barriers to contributing and aligning LLMs. RHEL AI and the InstructLab project, launched in collaboration with IBM, do exactly this by bringing more accessible AI models to a broader community of users, including domain and subject matter experts, wherever they are across the hybrid cloud.&rdquo;</p>
+
+<p><strong>Building on our GPU Momentum: Inferencing with NVIDIA L4 and L40S GPUs</strong></p>
+
+<p>IBM is expanding its NVIDIA GPU offerings in IBM Cloud and is among the first cloud providers to offer NVIDIA L40S. IBM Cloud also offers <a href="https://www.nvidia.com/en-us/data-center/l4/" target="_blank">NVIDIA L4 Tensor Core GPUs</a>&nbsp;to support both AI and other accelerated workloads including 3D graphics and video applications. This will enable our clients to deploy these GPU instances on-demand in an enterprise cloud platform with NVIDIA AI Enterprise software that is optimized to help address the needs of mission-critical workloads across resiliency, performance, security, compliance, and total cost of ownership.</p>
+
+<p>The direct access to NVIDIA GPUs on IBM Cloud in VPC and managed Red Hat OpenShift environments gives clients the flexibility to choose fit-for-purpose accelerators for AI training, fine-tuning, and inferencing. This can help lower the costs of running AI-powered applications. NVIDIA GPUs can integrate with data and AI platforms and services on IBM Cloud, including <a href="https://www.ibm.com/watsonx" target="_blank">watsonx to help you build, scale and govern AI</a>. IBM Cloud anticipates that it will also enable the latest NVIDIA Blackwell platform in 1H 2025.</p>
+
+<p>Later this year, IBM Cloud will be adding NVIDIA H100 GPUs, based on the <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/" target="_blank">NVIDIA Hopper </a><a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">architecture</a>, to nine regions with the ability to cluster multiple systems in Washington, D.C. and Frankfurt, Germany. We also plan on introducing <a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA </a><a href="https://www.nvidia.com/en-us/data-center/h200/" target="_blank">H200</a><a href="https://www.nvidia.com/en-us/data-center/h200/"> Tensor Core</a><a href="https://www.nvidia.com/en-us/data-center/h200/"> GPUs</a> in select regions early next year.</p>
+
+<p><strong>Accelerating Automation with Deployable Architectures</strong></p>
+
+<p>In addition to our work with partners, IBM is bringing our clients an integrated, enterprise platform experience with a set of pre-configured patterns to help with automating our solution offerings. <a href="https://cloud.ibm.com/catalog#reference_architecture" target="_blank">Deployable Architectures (DAs)</a> can offer quick, easy, and secured pre-configured deployment automation for IBM offerings on IBM Cloud. Our mission with these pre-configured offerings is to make it easier for businesses and developers to drive outcomes in hours, while also supporting them in their security and compliance goals. By addressing the risk and burden of deployment, clients will be able to redirect resources back into their business.</p>
+
+<p>IBM Cloud is on a mission to drive AI and hybrid cloud innovation for our clients. We have the infrastructure to train our own models and we have the leading skills from IBM Consulting to help clients define and execute hybrid cloud strategies that can drive tangible business value and help harness the potential of generative AI. Our solutions are designed to help transform how enterprises, developers and the open-source community build and leverage generative AI.</p>
+
+<p><strong>Learn More</strong></p>
+
+<p>For more information and to leverage the watsonx portfolio on IBM Cloud, visit <a href="https://www.ibm.com/cloud" target="_blank">HERE</a> for a free trial.</p>
+
+<p><em>Statements regarding IBM&rsquo;s future direction and intent are subject to change or withdrawal without notice and represent goals and objectives only.</em></p>
+</div>
+<div class="bx--btn bx--btn--primary wd_subscribe" role="button" tabindex="0" aria-label="Subscribe to email"><a href="subscribe">Subscribe to email</a></div>
+
+<h4>Article Categories</h4>
+<ul class="wd_layout-inline wd_category_link_list"><li class="wd_category_link"><div class="wd_category_10 wd_parent_"><a href="https://newsroom.ibm.com/latest-news-artificial-intelligence" class="wd_category_10 wd_parent_">Artificial intelligence</a></div></li><li class="wd_category_link"><div class="wd_category_20 wd_parent_"><a href="https://newsroom.ibm.com/latest-news-generative-AI" class="wd_category_20 wd_parent_">Generative AI</a></div></li><li class="wd_category_link"><div class="wd_category_13 wd_parent_"><a href="https://newsroom.ibm.com/latest-news-hybrid-cloud" class="wd_category_13 wd_parent_">Hybrid cloud</a></div></li></ul>
+
+<button class="bx--btn bx--btn--primary bx--btn-set ibm-margin-bottom-1 ibm-margin-top-1" id="wd_back_to">Back to Stories</button>	
+</div>
+</div><p class="tags">
+Tags:
+<a rel="tag" href="https://newsroom.ibm.com/tag/Generative-AI">Generative AI</a>
+</p>
+												
+
+											</div><!-- END CONTENT -->
+										</div>
+																				<div class="cds--col-span-3 ibm-mb-3 ibm-mt-5 wd_right_rail_wrapper">
+											<div class="wd_featureboxes_right wd_featureboxes-vertical">
+<div id="wd_featurebox-teaser_1437" class="wd_featurebox_container wd_featurebox-teaser"><div class="wd_featurebox_title">more articles</div><div class="wd_featurebox">
+<div class="wd_standard-teaser">
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33724" class="itemlink"><a href="https://newsroom.ibm.com/Blog-Expand-hybrid-cloud-and-AI-adoption-with-IBM-Power-Virtual-Server-to-boost-competitive-advantage">Expand hybrid cloud and AI adoption with IBM Power Virtual Server to boost competitive advantage</a></a></div></div>
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33723" class="itemlink"><a href="https://newsroom.ibm.com/IBM-to-drive-enterprise-ready-AI-adoption-at-scale-in-collaboration-with-NVIDIA">IBM to drive enterprise-ready AI adoption at scale in collaboration with NVIDIA</a></a></div></div>
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33722" class="itemlink"><a href="https://www.ibm.com/blog/b7-eu-ai-act/" target=”_blank”>AI will change the world—the terms are up to us</a></a></div></div>
+
+</div>
+</div></div></div>
+											 
+																																	<div class="wd_sidebar_search">
+												<!-- <h4>Categories</h4>
+												<form action="https://newsroom.ibm.com/campaign" method="get" name="wd_sidebar_search" id="wd_sidebar_search">
+												<ul class="tagsFilter-tags">
+
+
+<li class="tagsFilter-tags-item wd_cat-10" role="button" tabindex="0" aria-label="Artificial intelligence">
+	<a href="#" data-url="10" class="vsubnav">Artificial intelligence</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-11" role="button" tabindex="0" aria-label="Corporate">
+	<a href="#" data-url="11" class="vsubnav">Corporate</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-20" role="button" tabindex="0" aria-label="Generative AI">
+	<a href="#" data-url="20" class="vsubnav">Generative AI</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-13" role="button" tabindex="0" aria-label="Hybrid cloud">
+	<a href="#" data-url="13" class="vsubnav">Hybrid cloud</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-14" role="button" tabindex="0" aria-label="Research and innovation">
+	<a href="#" data-url="14" class="vsubnav">Research and innovation</a>
+</li>
+
+
+
+
+
+<li class="tagsFilter-tags-item wd_cat-12" role="button" tabindex="0" aria-label="Social impact">
+	<a href="#" data-url="12" class="vsubnav">Social impact</a>
+</li>
+
+
+
+</ul>
+
+
+																								<div class="wd_year_wrap">
+												<label for="wd_year">Year</label>
+												<select id="wd_year" name="year"><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option></select>												</div>
+																								<input type="hidden" name="cat" value="">
+												<button type="submit" class="bx--btn bx--btn--primary" id="wd_submit_sidebar_search">Submit</button>													
+												</form>																 -->
+											</div>
+
+																							<div class="bx--btn bx--btn--tertiary ibm-mt-4 wd_subscribe" role="button" tabindex="0" aria-label="Subscribe to email">
+													<a href="subscribe">Subscribe to email</a>
+												</div>
+											
+																																	<!--<div id="wd_right_assets">
+												<h4>Additional Assets</h4>
+											</div>-->
+																																</div>
+																			</div>
+								</section>
+																<section class="wd_stories_container">
+									<div class="cds--css-grid ibm-pt-8 ibm-pb-4">
+										<div class="cds--col-span-16 think-content-row">
+											<div class="wd_featureboxes_recommended_stories wd_featureboxes-vertical">
+<div id="wd_featurebox-teaser_1438" class="wd_featurebox_container wd_featurebox-teaser"><div class="wd_featurebox_title">Recommended Stories</div><div class="wd_featurebox">
+<div class="wd_standard-teaser">
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33724" class="itemlink"><a href="https://newsroom.ibm.com/Blog-Expand-hybrid-cloud-and-AI-adoption-with-IBM-Power-Virtual-Server-to-boost-competitive-advantage">Expand hybrid cloud and AI adoption with IBM Power Virtual Server to boost competitive advantage</a></a></div></div>
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33723" class="itemlink"><a href="https://newsroom.ibm.com/IBM-to-drive-enterprise-ready-AI-adoption-at-scale-in-collaboration-with-NVIDIA">IBM to drive enterprise-ready AI adoption at scale in collaboration with NVIDIA</a></a></div></div>
+<div class="item"><div class="item_name"><a href="https://newsroom.ibm.com/index.php?s=20317&item=33722" class="itemlink"><a href="https://www.ibm.com/blog/b7-eu-ai-act/" target=”_blank”>AI will change the world—the terms are up to us</a></a></div></div>
+
+</div>
+<p class="more"><a href="https://newsroom.ibm.com/index.php?s=20317"><span>More &raquo;</span></a></p>
+</div></div></div>
+										</div>
+									</div>
+								</section>
+																								                                								
+																															</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div><!-- IBM Content wrapper -->
+	</div><!-- IBM top -->
+	<script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/footer.min.js"></script>
+	<!-- <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/search-with-typeahead.rtl.min.js"></script> -->
+		<!-- FOOTER_BEGIN -->
+		<dds-footer-container></dds-footer-container>
+		<!-- FOOTER_END -->
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="js/wd_js.js"></script>
+	<script>
+    $(document).ready(function() {
+        $('.wd_subscribe a').addClass('wd_fancybox').attr('href', function(i, href) {
+            return href + '?pagetemplate=modal'
+        });
+        $('.wd_fancybox').fancybox({
+            type:'ajax',
+            width: 800,
+            height: 800
+            //autoSize: false,
+            //autoScale: false
+        });
+    });
+    </script>
+	<!-- START CUSTOM TOOLBAR -->
+		<div class="hidden">
+	<li class="wd_pageshare wd_tool wd_tool-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnewsroom.ibm.com%2FBlog-How-IBM-Cloud-is-Accelerating-Business-Outcomes-with-Gen-AI" class="wd_sharelink" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-1" class="at-icon at-icon-facebook" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;"><title id="at-svg-facebook-1">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></a></li>
+	<li class="wd_pageshare wd_tool wd_tool-twitter"><a href="https://twitter.com/share?url=http%3A%2F%2Fnewsroom.ibm.com%2FBlog-How-IBM-Cloud-is-Accelerating-Business-Outcomes-with-Gen-AI" class="wd_sharelink" target="_blank">
+		<svg id="icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="at-svg-twitter-2" class="at-icon at-icon-twitter" viewBox="0 0 32 32">
+			<title id="at-svg-twitter-2">Twitter</title>
+		  <defs>
+		    <style>
+		      .cls-1 {
+		        fill: none;
+		      }
+		    </style>
+		  </defs>
+		  <path d="m18.2342,14.1624l8.7424-10.1624h-2.0717l-7.591,8.8238-6.0629-8.8238h-6.9929l9.1684,13.3432-9.1684,10.6568h2.0718l8.0163-9.3183,6.4029,9.3183h6.9929l-9.5083-13.8376h.0005Zm-2.8376,3.2984l-.9289-1.3287L7.0763,5.5596h3.1822l5.9649,8.5323.9289,1.3287,7.7536,11.0907h-3.1822l-6.3272-9.05v-.0005Z"/>
+		  <rect id="_Transparent_Rectangle_" data-name="&amp;lt;Transparent Rectangle&amp;gt;" class="cls-1" width="32" height="32"/>
+		</svg>
+
+	</a></li>
+	<li class="wd_pageshare wd_tool wd_tool-linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fnewsroom.ibm.com%2FBlog-How-IBM-Cloud-is-Accelerating-Business-Outcomes-with-Gen-AI&title=Latest News&summary=&source=http%3A%2F%2Fnewsroom.ibm.com" class="wd_sharelink" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-linkedin-3" class="at-icon at-icon-linkedin" style="fill: rgb(255, 255, 255); width: 20px; height: 20px;"><title id="at-svg-linkedin-3">LinkedIn</title><g><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z" fill-rule="evenodd"></path></g></svg></a></li>
+	</div>
+
+	<script type="text/javascript">
+	$('.wd_pageshare.wd_tool-linkedin').prependTo('ul.wd_tools');
+	$('.wd_pageshare.wd_tool-twitter').prependTo('ul.wd_tools');
+	$('.wd_pageshare.wd_tool-facebook').prependTo('ul.wd_tools');
+	var itemTitle = '';
+		var itemTitle = $('').text();
+		var twitterHref = $('.wd_tool-twitter .wd_tool_icon a').attr('href');
+	if(itemTitle == '') itemTitle = "Latest News";
+
+		itemTitle = encodeURIComponent(itemTitle);
+
+	$('.wd_tool-twitter .wd_tool_icon a').attr('href', twitterHref+'&text='+itemTitle);
+	$(document).ready(function(){
+		$('.wd_sharelink').click(function(event) {
+			event.preventDefault();
+			window.open($(this).attr("href"), "popupWindow", "width=1100,height=700,scrollbars=yes");
+		});
+	});
+	function escapeHtml(string){
+		var entityMap = {
+			"&": "&amp;",
+			"<": "&lt;",
+			">": "&gt;",
+			'"': "&quot;",
+			"'": "&#39;",
+			"/": "&#x2F;",
+			"`": "&#x60;",
+			"=": "&#x3D;"
+		};
+		return String(string).replace(/[&<>"'`=\/]/g, function(s){
+			return entityMap[s];
+		});
+	}
+
+	</script>
+	<!-- END CUSTOM TOOLBAR -->
+
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script>
+<!-- end spin_special_output(body_end) -->
+<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'88750561cc76507e',t:'MTcxNjI5OTI3NC42NjkwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

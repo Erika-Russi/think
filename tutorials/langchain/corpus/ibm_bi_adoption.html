@@ -1,0 +1,1699 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+      <meta charset="UTF-8">
+      <link rel="icon" href="//www.ibm.com/content/dam/adobe-cms/default-images/favicon.svg"><link rel="shortcut icon" type="image/x-icon" href="https://www.ibm.com/blog/wp-content/themes/sapphire/images/favicon.ico" sizes="32x32" />      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1">
+
+      <!-- DEFINITIONS -->
+      <title>A new era in BI: Overcoming low adoption to make smart decisions accessible for all - IBM Blog</title>
+
+            <!--<meta name="description" content="">-->
+
+
+     
+
+      <!-- THEME COLOR -->
+      <meta name="theme-color" content="#000000">
+
+      <!-- REFERRER POLICY -->
+      <meta name="referrer" content="no-referrer-when-downgrade">
+
+      <script src="https://1.www.s81c.com/common/stats/ibm-common.js" type="text/javascript" async="async"></script>
+
+      <!-- LANGUAGE/TRANSLATIONS -->
+
+      <!-- AMP SCRIPTS -->
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+      <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+      <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+      <script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script>
+      <script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script>
+      <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+      <script async custom-element="amp-autocomplete" src="https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js"></script>
+      <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+      <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/v1.35.0/card-section-simple.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/card-section-simple.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/next/card-section-simple.min.js"></script>
+
+
+                  <!-- KALTURA   -->
+            <script src="https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841"></script>
+      
+
+      
+            <!-- CARBON SCRIPTS -->
+            <script src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/2.0.0.alpha.61/masthead.min.js" type="module"></script>
+            <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/footer.min.js"></script>
+            <script type="module" src="//1.www.s81c.com/common/v18/js/www.js"></script>
+            <link rel="stylesheet" href="//1.www.s81c.com/common/v18/css/www.css" >
+      
+      
+      
+                  <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+            <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+                              <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2024/05/quantum-impact-300x158.jpg" media="(max-width: 300px)">
+                  <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2024/05/quantum-impact-630x330.jpg" media="(max-width: 1200px) and (min-width: 301px)">
+                  <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2024/05/quantum-impact-1200x630.jpg" media="(max-width: 2400px) and (min-width: 631px)">
+                  <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2024/05/quantum-impact.jpg" media="(max-width: 2400px) and (min-width: 1201px)">
+                  
+      
+      <!-- FONTS -->
+      <!-- <link rel="preload" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400,500|IBM+Plex+Sans:300,400,500&display=swap" rel="stylesheet"> -->
+
+      <!-- ANALYTICS -->
+      <script>
+      
+      // Digital Registry
+      digitalData = {
+            "page": {
+                  "category": {
+                        "primaryCategory": "Artificial intelligence"
+                  },
+                  "pageInfo": {
+                        "language": "en-US",
+                        "country": "US",
+                        "version": "custom",
+                        "effectiveDate": "2024-05-17",
+                        "publishDate": "2024-05-17",
+                        "optimizely": {
+                              "enabled": "false",
+                        },
+                        "ibm": {
+                              "contentDelivery": "WordPress",
+                              "contentProducer": "Hand coded",
+                              "owner": "Kasun Attanapola",
+                              "siteID": "SECURITYINTELLIGENCE",
+                              "type": "Posts",
+                                                      }
+                  }
+            }
+      }
+
+      
+      // Custom Click Tagging
+      // Collect and send clicks not detectable by ida_stats.js
+      function sendClickTag(section, feature, destination) {
+            console.log(section + " " + feature)
+            var config = {
+                  type: 'ELEMENT',
+                  primaryCategory: section, // e_a1 - Element Category
+                  eventName: feature, // e_a2 - Element Name
+                  targetURL: destination, // e_a7 - Element Attribute: ibmEvTarget
+            };
+            ibmStats.event(config);
+      }
+
+      // Custom Click Tagging
+      // Collect and send clicks not detectable by ida_stats.js
+      // function sendClickConversion(feature, title) {
+      //   var config = {
+      //         type               : 'pageclick',
+      //         primaryCategory    : 'PAGE CLICK',
+      //         eventCategoryGroup : "TIMELINE - SECURITY INTELLIGENCE",
+      //         eventName          : feature,
+      //         targetTitle        : title
+      //       };
+      //   ibmStats.event(config);
+      // }
+
+      // Custom Link Event
+      // Add clicktag event on every link inside the element
+      function tagAllLinks(element, section, feature) {
+            var element = document.querySelectorAll(element);
+            if (typeof(element) != 'undefined' && element != null) {
+                  for (var i = 0; i < element.length; i++) {
+                        var elements = element[i].querySelectorAll("a:not(.btn)");
+                        for (var o = 0; o < elements.length; o++) {
+                              if (elements[o].getAttribute('listener') !== 'true') {
+                                    var destination = elements[o].getAttribute('href');
+                                    elements[o].addEventListener('click', function() {
+                                          if (this.getAttribute('listener') === 'true') {
+                                                sendClickTag(section, feature, this.getAttribute('href'));
+                                                this.setAttribute('listener', 'false');
+                                          }
+                                    }, false);
+                                    elements[o].setAttribute('listener', 'true');
+                              }
+                        }
+                  }
+            }
+      }
+
+      window.onload = function() {
+
+            // Call to action click tag
+            var ctaButton = document.querySelectorAll(".single__content a");
+            if (typeof(ctaButton) != 'undefined' && ctaButton != null && ctaButton.length !== 0) {
+                  for (var i = 0; i < ctaButton.length; i++) {
+                        ctaButton[i].addEventListener('click', function() {
+                              if (this.getAttribute('listener') === 'true') {
+                                    sendClickTag("BODY", "CALL TO ACTION");
+                                    this.setAttribute('listener', 'false');
+                              }
+                        }, false);
+                        ctaButton[i].setAttribute('listener', 'true');
+                  }
+            }
+
+            // Read more click tag
+            var readButton = document.querySelectorAll(".continue-reading button");
+            if (typeof(readButton) != 'undefined' && readButton != null && readButton.length !== 0) {
+                  for (var i = 0; i < readButton.length; i++) {
+                        readButton[i].addEventListener('click', function() {
+                              if (this.getAttribute('listener') === 'true') {
+                                    sendClickTag("BODY", "READ-MORE");
+                                    this.setAttribute('listener', 'false');
+                              }
+                        }, false);
+                        readButton[i].setAttribute('listener', 'true');
+                  }
+            }
+
+
+            //  LISTICLES tag - Arrows
+            //left arrow
+            var leftArrow = document.getElementById("prev");
+            if (typeof(leftArrow) != 'undefined' && leftArrow != null) {
+                  //for (var i = 0; i < leftArrow.length; i++) {
+                  leftArrow.addEventListener('click', function() {
+                        if (this.getAttribute('listener') === 'true' && leftArrow.id == "prev") {
+                              sendClickTag("BODY", "LISTICLE-LEFT-ARROW");
+                              this.setAttribute('listener', 'false');
+                        }
+                  }, false);
+                  leftArrow.setAttribute('listener', 'true');
+                  //}
+            }
+            //right arrow
+            var rightArrow = document.getElementById("next");
+            if (typeof(rightArrow) != 'undefined' && rightArrow != null) {
+                  //for (var i = 0; i < rightArrow.length; i++) {
+                  rightArrow.addEventListener('click', function() {
+                        if (this.getAttribute('listener') === 'true' && rightArrow.id == "next") {
+                              sendClickTag("BODY", "LISTICLE-RIGHT-ARROW");
+                              this.setAttribute('listener', 'false');
+                        }
+                  }, false);
+                  rightArrow.setAttribute('listener', 'true');
+                  //}
+            }
+
+
+
+            //  LISTICLES tag - numbers
+            var listicleTopButton = document.querySelectorAll(".listicle__pagination__numbers");
+            if (typeof(listicleTopButton) != 'undefined' && listicleTopButton != null && listicleTopButton.length !== 0) {
+                  for (var i = 0; i < listicleTopButton.length; i++) {
+                        var currentSlide = 1;
+
+                        listicleTopButton[i].addEventListener('click', function() {
+
+                              if (this.getAttribute('listener') === 'true') {
+                                    currentSlide++;
+                                    var total = i;
+
+                                    // var clickedSlides=currentSlide/2;
+                                    // console.log(clickedSlides.toFixed());
+
+                                    //I'm removing 2 because 2 arrows on the listicle are unclickable, but present on the DOM
+                                    // clickableArrows = i-2;
+                                    // clickableArrows = i-1;
+                                    // I'm deviding by 2 because on each slide we have 2 arrows, so we were actually sendind the double of tags
+                                    // clickableArrows= clickableArrows/2;
+                                    // console.log(i);
+                                    // clickableArrows.toFixed();
+
+                                    if (currentSlide <= total) {
+                                          sendClickTag("PAGE CLICK", "LISTICLE-NAVIGATION-SLIDE" + currentSlide);
+                                          this.setAttribute('listener', 'false');
+                                    } else {
+                                          sendClickTag("PAGE CLICK", "LISTICLE-NAVIGATION-END");
+                                          this.setAttribute('listener', 'false');
+                                    }
+
+
+                              }
+                        }, false);
+                        listicleTopButton[i].setAttribute('listener', 'true');
+                  }
+            }
+            // // Timeline box click tag
+            // var boxButton = document.querySelectorAll(".timeline__content .box");
+            // if (typeof(boxButton) != 'undefined' && boxButton != null && boxButton.length !== 0) {
+            //   for (var i = 0; i < boxButton.length; i++) {
+            //     boxButton[i].addEventListener('click', function(){
+            //       if (this.getAttribute('listener') === 'true') {
+            //         sendClickConversion("DETAILED VIEW", this.getAttribute('data-title'));
+            //         this.setAttribute('listener', 'false');
+            //       }
+            //     }, false);
+            //     boxButton[i].setAttribute('listener', 'true');
+            //   }
+            // }
+
+      };
+</script>
+
+<!-- COREMETRICS -->
+      <script defer src="https://1.www.s81c.com/common/stats/ida_stats.js" type="text/javascript"></script>
+
+      <!-- AMP DEFAULT CSS -->
+      <style amp-boilerplate>
+            body {
+                  -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                  -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                  -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                  animation: -amp-start 8s steps(1, end) 0s 1 normal both
+            }
+
+            @-webkit-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @-moz-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @-ms-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @-o-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+      </style><noscript>
+            <style amp-boilerplate>
+                  body {
+                        -webkit-animation: none;
+                        -moz-animation: none;
+                        -ms-animation: none;
+                        animation: none
+                  }
+            </style>
+      </noscript>
+
+      <link rel="stylesheet" href="https://www.ibm.com/blog/wp-content/themes/sapphire/minifications/modules.css?v=1715278364">
+
+      <!-- CUSTOM CSS -->
+      <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v22.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="A deeper look into why business intelligence challenges might persist and what it means for users across an organization." />
+	<link rel="canonical" href="https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="A new era in BI: Overcoming low adoption to make smart decisions accessible for all - IBM Blog" />
+	<meta property="og:description" content="A deeper look into why business intelligence challenges might persist and what it means for users across an organization." />
+	<meta property="og:url" content="https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/" />
+	<meta property="og:site_name" content="IBM Blog" />
+	<meta property="article:published_time" content="2024-05-17T12:00:00+00:00" />
+	<meta property="article:modified_time" content="2024-05-16T21:36:23+00:00" />
+	<meta property="og:image" content="https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1.jpg" />
+	<meta property="og:image:width" content="2400" />
+	<meta property="og:image:height" content="1260" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Kasun Attanapola" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1.jpg" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Kasun Attanapola" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="6 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/","url":"https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/","name":"A new era in BI: Overcoming low adoption to make smart decisions accessible for all - IBM Blog","isPartOf":{"@id":"https://www.ibm.com/blog/#website"},"primaryImageOfPage":{"@id":"https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/#primaryimage"},"image":{"@id":"https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/#primaryimage"},"thumbnailUrl":"https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1.jpg","datePublished":"2024-05-17T12:00:00+00:00","dateModified":"2024-05-16T21:36:23+00:00","author":{"@id":"https://www.ibm.com/blog/#/schema/person/3b394fd7fafa47c2501af934daab5abc"},"description":"A deeper look into why business intelligence challenges might persist and what it means for users across an organization.","breadcrumb":{"@id":"https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/#primaryimage","url":"https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1.jpg","contentUrl":"https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1.jpg","width":2400,"height":1260,"caption":"Two colleagues looking at an iPad in an office together"},{"@type":"BreadcrumbList","@id":"https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ibm.com/blog/"},{"@type":"ListItem","position":2,"name":"A new era in BI: Overcoming low adoption to make smart decisions accessible for all","item":""}]},{"@type":"WebSite","@id":"https://www.ibm.com/blog/#website","url":"https://www.ibm.com/blog/","name":"IBM Blog","description":"IBM Blog","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.ibm.com/blog/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.ibm.com/blog/#/schema/person/3b394fd7fafa47c2501af934daab5abc","name":"Kasun Attanapola","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ibm.com/blog/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/69bf9ce8fbf55ff1139833d5fa5d41a0?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/69bf9ce8fbf55ff1139833d5fa5d41a0?s=96&d=mm&r=g","caption":"Kasun Attanapola"},"description":"Kasun Attanapola is a Principal Product Manager at IBM Data and AI. In his role, Kasun is responsible for bringing together the market landscape, design and technology to nurture software from prototype to launch. His areas of expertise include, Data visualizations, Data science, Geospatial mapping and Business Intelligence","sameAs":["https://www.linkedin.com/in/kasun-attanapola-mba-30472933/"],"url":"https://www.ibm.com/blog/author/kasun-attanapola/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.ibm.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.ibm.com/blog/wp-includes/css/dist/block-library/style.min.css?ver=6.5.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='taxonomy-image-plugin-public-css' href='https://www.ibm.com/blog/wp-content/plugins/taxonomy-images/css/style.css?ver=0.9.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='wthf-style-css' href='https://www.ibm.com/blog/wp-content/plugins/was-this-article-helpful/css/style.css?ver=6.5.2' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.ibm.com/blog/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.ibm.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.ibm.com/blog/wp-json/" /><link rel="alternate" type="application/json" href="https://www.ibm.com/blog/wp-json/wp/v2/posts/461012" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ibm.com/blog/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.5.2" />
+<link rel='shortlink' href='https://www.ibm.com/blog/?p=461012' />
+<link rel="alternate" type="application/json+oembed" href="https://www.ibm.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ibm.com%2Fblog%2Fa-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.ibm.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ibm.com%2Fblog%2Fa-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all%2F&#038;format=xml" />
+<style amp-custom>@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,300,400,500,600');@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400,500,600,700');@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap')</style><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://www.ibm.com/blog/wp-content/themes/sapphire/minifications/single.css?v=1710439790">
+      <!-- YOAST SEO -->
+      
+</head>
+
+<body class="" >
+<dds-masthead-container
+  data-endpoint="/common/carbon-for-ibm-dotcom/translations/masthead-footer/v2.1"
+  auth-method="profile-api"
+  id="masthead-container"
+  has-contact="false"
+></dds-masthead-container>
+   
+
+
+    <script type="module">
+        //L1 nav
+        const l1Data = {
+            title: 'Think',
+            url: 'https://www.ibm.com/think',
+            menuItems: [
+                {
+                    "title": "Think 2024",
+                    "titleEnglish": "Think 2024",
+                    "submenu": {
+                        "columns": 1,
+                        "menuSections": [
+                            {
+                                "span": 1,
+                                "items": [
+                                    {
+                                        "title": 'Overview',
+                                        "url": 'https://www.ibm.com/events/think/'
+                                    },
+                                    {
+                                        "title": 'Experience',
+                                        "url": 'https://www.ibm.com/events/think/experience'
+                                    },
+                                    {
+                                        "title": 'Agenda',
+                                        "url": 'https://www.ibm.com/events/think/agenda'
+                                    },
+                                    {
+                                        "title": 'Partner Day',
+                                        "url": 'https://www.ibm.com/events/think/partners'
+                                    },
+                                    {
+                                        "title": 'Think on Tour',
+                                        "url": 'https://www.ibm.com/events/think/on-tour'
+                                    },
+                                    {
+                                        "title": 'FAQ',
+                                        "url": 'https://www.ibm.com/events/think/faq'
+                                    },
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": 'Artificial intelligence',
+                    "titleEnglish": 'Artificial intelligence',
+                    "url": 'https://www.ibm.com/think/artificial-intelligence'
+                },
+                {
+                    "title": 'Cloud',
+                    "titleEnglish": 'Cloud',
+                    "url": 'https://www.ibm.com/think/cloud'
+                },
+                {
+                    "title": 'Security',
+                    "titleEnglish": 'Security',
+                    "url": 'https://www.ibm.com/think/security'
+                },
+                {
+                    "title": 'Sustainability',
+                    "titleEnglish": 'Sustainability',
+                    "url": 'https://www.ibm.com/think/sustainability'
+                },
+                {
+                    "title": "Blog",
+                    "submenu": {
+                        "columns": 2,
+                        "footer": {
+                            "title": "View all blog posts",
+                            "url": 'https://www.ibm.com/blog/'
+                        },
+                        "menuSections": [
+                            {
+                                "span": 1,
+                                "heading": {
+                                    "headingLevel": 2,
+                                    "title": "Categories",
+                                },
+                                "items": [{
+                                        "title": "Analytics",
+                                        "url": "https://www.ibm.com/blog/category/analytics/"
+                                    },
+                                    {
+                                        "title": "Artificial intelligence",
+                                        "url": "https://www.ibm.com/blog/category/artificial-intelligence/"
+                                    },
+                                    {
+                                        "title": "Automation",
+                                        "url": "https://www.ibm.com/blog/category/automation/"
+                                    },
+                                    {
+                                        "title": "Business transformation",
+                                        "url": "https://www.ibm.com/blog/category/business-transformation/"
+                                    },
+                                    {
+                                        "title": "Cloud",
+                                        "url": "https://www.ibm.com/blog/category/cloud/"
+                                    },
+                                    {
+                                        "title": "Security",
+                                        "url": "https://www.ibm.com/blog/category/security/"
+                                    },
+                                    {
+                                        "title": "Social impact",
+                                        "url": "https://www.ibm.com/blog/category/social-impact/"
+                                    },
+                                    {
+                                        "title": "Supply chain",
+                                        "url": "https://www.ibm.com/blog/category/supply-chain/"
+                                    },
+                                    {
+                                        "title": "Sustainability",
+                                        "url": "https://www.ibm.com/blog/category/sustainability/"
+                                    },
+                                ]
+                            },
+                            {
+                                "span": 1,
+                                "heading": {
+                                    "headingLevel": 2,
+                                    "title": "Industries"
+                                },
+                                "items": [
+                                    {
+                                        "title": "Energy and utilities",
+                                        "url": "https://www.ibm.com/blog/category/energy-and-utilities/"
+                                    },
+                                    {
+                                        "title": "Financial services",
+                                        "url": "https://www.ibm.com/blog/category/financial-services/"
+                                    },
+                                    {
+                                        "title": "Government",
+                                        "url": "https://www.ibm.com/blog/category/government/"
+                                    },
+                                    {
+                                        "title": "Healthcare",
+                                        "url": "https://www.ibm.com/blog/category/healthcare/"
+                                    },
+                                    {
+                                        "title": "Manufacturing",
+                                        "url": "https://www.ibm.com/blog/category/manufacturing/"
+                                    },
+                                    {
+                                        "title": "Media and entertainment",
+                                        "url": "https://www.ibm.com/blog/category/media-and-entertainment/"
+                                    },
+                                    {
+                                        "title": "Mining and extraction",
+                                        "url": "https://www.ibm.com/blog/category/mining-and-extraction/"
+                                    },
+                                    {
+                                        "title": "Technology",
+                                        "url": "https://www.ibm.com/blog/category/technology/"
+                                    },
+                                    {
+                                        "title": "Telecommunications",
+                                        "url": "https://www.ibm.com/blog/category/telecommunications/"
+                                    },
+                                    {
+                                        "title": "Transportation",
+                                        "url": "https://www.ibm.com/blog/category/transportation/"
+                                    },
+                                ]
+                            },
+                        ]
+                    }
+                },
+                {
+                    "title": "Videos",
+                    "titleEnglish": "Videos",
+                    "submenu": {
+                        "columns": 1,
+                        "menuSections": [
+                            {
+                                "span": 1,
+                                "items": [
+                                    {
+                                        "title": 'Overview',
+                                        "url": 'https://www.ibm.com/think/videos'
+                                    },
+                                    {
+                                        "title": 'AI Academy',
+                                        "url": 'https://www.ibm.com/think/ai-academy'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Events",
+                    "titleEnglish": "Events",
+                    "submenu": {
+                        "columns": 1,
+                        "menuSections": [
+                            {
+                                "span": 1,
+                                "items": [
+                                    {
+                                        "title": 'Think 2024',
+                                        "url": 'https://www.ibm.com/events/think/'
+                                    },
+                                    {
+                                        "title": 'Think on Tour',
+                                        "url": 'https://www.ibm.com/events/think/on-tour/'
+                                    },
+                                    {
+                                        "title": 'TechXchange',
+                                        "url": 'https://www.ibm.com/community/ibm-techxchange-conference/'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "More",
+                    "submenu": {
+                        "columns": 2,
+                        "menuSections": [
+                            {
+                                "span": 1,
+                                "heading": {
+                                    "headingLevel": 2,
+                                    "title": "Topics",
+                                },
+                                "items": [
+                                    {
+                                        "title": "Analytics",
+                                        "url": "https://www.ibm.com/think/analytics"
+                                    },
+                                    {
+                                        "title": "Asset management",
+                                        "url": "https://www.ibm.com/think/asset-management"
+                                    },
+                                    {
+                                        "title": "Business automation",
+                                        "url": "https://www.ibm.com/think/business-automation"
+                                    },
+                                    {
+                                        "title": "Compute and servers",
+                                        "url": "https://www.ibm.com/think/compute"
+                                    },
+                                    {
+                                        "title": "DevOps",
+                                        "url": "https://www.ibm.com/think/devops"
+                                    },
+                                    {
+                                        "title": "IT automation",
+                                        "url": "https://www.ibm.com/think/it-automation"
+                                    },
+                                    {
+                                        "title": "Middleware",
+                                        "url": "https://www.ibm.com/think/middleware"
+                                    },
+                                    {
+                                        "title": "Network",
+                                        "url": "https://www.ibm.com/think/network"
+                                    },
+                                    {
+                                        "title": "Quantum",
+                                        "url": "https://www.ibm.com/think/quantum"
+                                    },
+                                    {
+                                        "title": "Storage",
+                                        "url": "https://www.ibm.com/think/storage"
+                                    },
+                                ]
+                            },
+                            {
+                                "span": 1,
+                                "heading": {
+                                    "headingLevel": 2,
+                                    "title": "Content types"
+                                },
+                                "items": [
+                                    {
+                                        "title": "Explainers",
+                                        "url": "https://www.ibm.com/topics/"
+                                    },
+                                    {
+                                        "title": "Newsletters",
+                                        "url": "https://www.ibm.com/subscribe"
+                                    },
+                                    {
+                                        "title": "Podcasts",
+                                        "url": "https://www.ibm.com/think/podcasts"
+                                    },
+                                    {
+                                        "title": "Reference architectures",
+                                        "url": "https://www.ibm.com/architectures"
+                                    },
+                                ]
+                            },
+                        ]
+                    }
+                },
+                {
+                    "title": 'View all',
+                    "titleEnglish": 'View all',
+                    "url": 'https://www.ibm.com/think/search'
+                },
+            ],
+            actions: {
+                "cta": {
+                    "title": "Subscribe",
+                    "url": "https://www.ibm.com/account/reg/us-en/signup?formid=news-urx-51525"
+                }
+            }
+        };
+        document.getElementById('masthead-container').l1Data = l1Data;
+
+
+        document.querySelector('dds-masthead-container').activateSearch = true;
+
+        //Creating search scope modifier
+        let str = '<div slot="search" id="search-modifier"><input type="checkbox" id="search-platform" name="search-platform" value="https://www.ibm.com/search?lnk=mhsrch"><label for="search-platform">Search within IBM Blogs</label></div>';
+        document.querySelector('dds-masthead').insertAdjacentHTML('beforeend', str);
+
+        //Checking if mouse is hovering scope modifier
+        let isMouseHover = false
+        let searchModifier = document.getElementById("search-modifier");
+        searchModifier.addEventListener("mouseleave", () => {
+            isMouseHover = false
+        }, false);
+        searchModifier.addEventListener("mouseover", () => {
+            isMouseHover = true
+        }, false);
+
+        //Enabling search inside blog
+        document.querySelector('dds-search-with-typeahead').redirectUrl = "https://www.ibm.com/blog/?";
+        document.querySelector('dds-search-with-typeahead').searchPlaceholder = "Search within IBM Blogs";
+
+        //Event to clean searchTerm to prevent unwanted characters
+        document.querySelector('dds-search-with-typeahead').addEventListener("input", (e) => {
+            const inputValue = e.target.value;
+            const regex = /^[A-Za-z0-9 ]*$/;
+
+            if (!regex.test(inputValue)) {
+                document
+                    .querySelector("#masthead-container > dds-masthead > dds-search-with-typeahead")
+                    .shadowRoot.querySelector("form > div > input").value = inputValue.replace(/[^A-Za-z0-9 ]/g, '');
+            }
+        });
+
+        //Event for scope modifier checkbox click
+        document.getElementById("search-platform").addEventListener("click", (e) => {
+            if (e.target.checked == false) {
+                //Enabling search inside ibm.com
+                document.querySelector('dds-search-with-typeahead').redirectUrl = "https://www.ibm.com/search?lnk=mhsrch";
+                document.querySelector('dds-search-with-typeahead').searchPlaceholder = "Search all of IBM";
+            } else {
+                //Enabling search inside blog
+                document.querySelector('dds-search-with-typeahead').redirectUrl = "https://www.ibm.com/blog/";
+                document.querySelector('dds-search-with-typeahead').searchPlaceholder = "Search within IBM Blogs";
+            }
+        }, false);
+
+        //Open/Close search scope modifier events
+        document.addEventListener("dds-search-with-typeahead-input", (e) => {
+            let searchMod = document.getElementById("search-modifier");
+            if (document.querySelector('dds-search-with-typeahead').open || isMouseHover) {
+                searchMod.style.display = "block";
+            }
+        });
+        document.addEventListener("dds-search-with-typeahead-toggled", (e) => {
+            let searchMod = document.getElementById("search-modifier");
+            console.log(e.detail);
+            if (e.detail.active || e.detail.open || isMouseHover) {
+                searchMod.style.display = "block";
+            } else {
+                searchMod.style.display = "none";
+            }
+
+        });
+
+        //Closing search and hiding scope modifier
+        document.getElementById("search-platform").checked = true;
+        document.querySelector('dds-masthead-container').activateSearch = false;
+        document.getElementById("search-modifier").style.display = "none";
+
+        //Forcing the L1 focus to always be "Blog" -- Only for ibm.com
+                    const waitForSelector = (selector) =>{
+                return new Promise((resolve, reject)=>{
+                    if (document.querySelector(selector)) {
+                        return resolve(document.querySelector(selector));
+                    }
+                    const observer = new MutationObserver((mutations) => {
+                        if (document.querySelector(selector)) {
+                            resolve(document.querySelector(selector));
+                            observer.disconnect();
+                        }
+                    });
+                    observer.observe(document.body, {
+                        childList:true,
+                        subtree:true
+                    })
+                });
+            }
+            const selector = "#masthead-container > dds-masthead > dds-masthead-l1";
+            waitForSelector(selector).then((element)=>{{
+                element.shadowRoot.querySelector("div > a.bx--masthead__l1-title").removeAttribute('active');
+                element.shadowRoot.querySelector("div > div.bx--masthead__l1-menu-container-outer > div > ul > li:nth-child(6) > button").setAttribute('active', 'true');
+            }})
+
+            document.addEventListener('click', function(event) {
+                setTimeout(function() {
+                    if (event.target.nodeName === "DDS-MASTHEAD-L1") {
+                        if (window.innerWidth >= 800) {
+                            document
+                                .querySelector('#masthead-container > dds-masthead > dds-masthead-l1')
+                                .shadowRoot.querySelector("div > div.bx--masthead__l1-menu-container-outer > div > ul > li:nth-child(6) > div")
+                                .style.maxHeight = "600px";
+                        } else {
+                            document
+                                .querySelector('#masthead-container > dds-masthead > dds-masthead-l1')
+                                .shadowRoot.querySelector("div > div.bx--masthead__l1-menu-container-outer > div > ul > li:nth-child(6) > div")
+                                .style.cssText = "max-height: calc(480px - 4rem) !important;"
+                        }
+                    }
+                }, 100);
+            });
+            </script>
+
+    <!-- NAVIGATION -->
+<!-- BACK TO TOP -->
+<div class="scroll-to-top ">
+
+    <!-- TOP VIEWER TRIGGER -->
+    <div id="top-viewer" class="scroll-to-top__viewer"></div>
+
+    <!-- BUTTON -->
+    <div class="sticky" style="height: 100%;">
+            
+            <button     id="scrollToTopButton" 
+                        on="tap:top-viewer.scrollTo(duration=200, position=bottom)" 
+                        class="tap_target ">
+                        
+                        <div class="scroll-to-top__button">
+                              <amp-img width="12" height="16" layout="fixed" alt="Back-to-top" src="https://www.ibm.com/blog/wp-content/themes/sapphire/images/scroll-to-top.svg"></amp-img>
+                        </div>
+            </button>
+
+    </div>
+
+    <!-- SCROLL SHOW/HIDE ANIMATION -->
+    <amp-animation id="showAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "1",
+                        "visibility": "visible"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+    <amp-animation id="hideAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "0",
+                        "visibility": "hidden"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+</div>
+
+<!-- CHECK PAGE POSITION -->
+<amp-position-observer target="top-viewer" intersection-ratios="0" on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer>
+
+<!-- SCHEMA -->
+<script id="post-schema" type="application/ld+json">
+      {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "A new era in BI: Overcoming low adoption to make smart decisions accessible for all",
+      "mainEntityOfPage": "https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/",
+      "author": {
+            "@type": "Person",
+            "name": "Kasun Attanapola"
+      },
+      "datePublished": "2024-05-17T08:00:00-04:00",
+      "dateModified": "2024-05-16T17:36:23-04:00",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Security Intelligence",
+            "logo":{
+                  "@type": "ImageObject",
+                  "url": "https://securityintelligence.com/wp-content/themes/security-intelligence/assets/img/logo.png"
+            }
+      },
+      "image": [ "https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1-630x330.jpg" ],
+      "articleBody": "&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Organizations today are both empowered and overwhelmed by data. This paradox lies at the heart of modern business strategy: while there&#039;s an unprecedented amount of data available, unlocking actionable insights requires more than access to numbers.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;The push to enhance productivity, use resources wisely, and boost sustainability through data-driven decision-making is stronger than ever. Yet, the low adoption rates of business intelligence (BI) tools present a significant hurdle.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;According to Gartner, although the number of employees that use analytics and business intelligence (ABI) has increased in 87% of surveyed organizations, ABI is still used by only 29% of employees on average. Despite the clear benefits of BI, &lt;a href=&quot;https://www.eckerson.com/articles/new-study-identifies-drivers-of-bi-and-analytics-adoption-in-companies-today&quot;&gt;the percentage of employees actively using ABI tools has seen minimal growth over the past 7 years&lt;/a&gt;. So why aren’t more people using BI tools?&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading --&gt;
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Understanding the low adoption rate&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;The low adoption rate of traditional BI tools, particularly dashboards, is a multifaceted issue rooted in both the inherent limitations of these tools and the evolving needs of modern businesses. Here&#039;s a deeper look into why these challenges might persist and what it means for users across an organization:&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;1. Complexity and lack of accessibility&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:list {&quot;ordered&quot;:true} --&gt;
+&lt;ol&gt;&lt;/ol&gt;
+&lt;!-- /wp:list --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;While excellent for displaying consolidated data views, dashboards often present a steep learning curve. This complexity makes them less accessible to nontechnical users, who might find these tools intimidating or overly complex for their needs. Moreover, the static nature of traditional dashboards means they are not built to adapt quickly to changes in data or business conditions without manual updates or redesigns.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;2. Limited scope for actionable insights&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Dashboards typically provide high-level summaries or snapshots of data, which are useful for quick status checks but often insufficient for making business decisions. They tend to offer limited guidance on what actions to take next, lacking the context needed to derive actionable, decision-ready insights. This can leave decision-makers feeling unsupported, as they need more than just data; they need insights that directly inform action.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;3. The &quot;unknown unknowns&quot;&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;A significant barrier to BI adoption is the challenge of not knowing what questions to ask or what data might be relevant. Dashboards are static and require users to come with specific queries or metrics in mind. Without knowing what to look for, business analysts can miss critical insights, making dashboards less effective for exploratory data analysis and real-time decision-making.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading --&gt;
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Moving beyond one-size-fits-all: The evolution of dashboards&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;While traditional dashboards have served us well, they are no longer sufficient on their own. The world of BI is shifting toward integrated and personalized tools that understand what each user needs. This isn’t just about being user-friendly; it’s about making these tools vital parts of daily decision-making processes for everyone, not just for those with technical expertise.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Emerging technologies such as generative AI (gen AI) are enhancing BI tools with capabilities that were once only available to data professionals. These new tools are more adaptive, providing personalized BI experiences that deliver contextually relevant insights users can trust and act upon immediately. We’re moving away from the one-size-fits-all approach of traditional dashboards to more dynamic, customized analytics experiences. These tools are designed to guide users effortlessly from data discovery to actionable decision-making, enhancing their ability to act on insights with confidence.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading --&gt;
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;The future of BI: Making advanced analytics accessible to all&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;As we look toward the future, ease of use and personalization are set to redefine the trajectory of BI.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;1. Emphasizing ease of use&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:list {&quot;ordered&quot;:true} --&gt;
+&lt;ol&gt;&lt;/ol&gt;
+&lt;!-- /wp:list --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;The new generation of BI tools breaks down the barriers that once made powerful data analytics accessible only to data scientists. With simpler interfaces that include conversational interfaces, these tools make interacting with data as easy as having a chat. This integration into daily workflows means that advanced data analysis can be as straightforward as checking your email. This shift democratizes data access and empowers all team members to derive insights from data, regardless of their technical skills.&lt;br&gt;&lt;br&gt;For example, imagine a sales manager who wants to quickly check the latest performance figures before a meeting. Instead of navigating through complex software, they ask the BI tool, &quot;What were our total sales last month?&quot; or &quot;How are we performing compared to the same period last year?&quot;&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;The system understands the questions and provides accurate answers in seconds, just like a conversation. This ease of use helps to ensure that every team member, not just data experts, can engage with data effectively and make informed decisions swiftly.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;2. Driving personalization&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Personalization is transforming how BI platforms present and interact with data. It means that the system learns from how users work with it, adapting to suit individual preferences and meeting the specific needs of their business.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;For example, a dashboard might display the most important metrics for a marketing manager differently than for a production supervisor. It&#039;s not just about the user&#039;s role; it&#039;s also about what&#039;s happening in the market and what historical data shows.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Alerts in these systems are also smarter. Rather than notifying users about all changes, the systems focus on the most critical changes based on past importance. These alerts can even adapt when business conditions change, helping to ensure that users get the most relevant information without having to look for it themselves.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;By integrating a deep understanding of both the user and their business environment, BI tools can offer insights that are exactly what&#039;s needed at the right time. This makes these tools incredibly effective for making informed decisions quickly and confidently.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading --&gt;
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Navigating the future: Overcoming adoption challenges&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;While the advantages of integrating advanced BI technologies are clear, organizations often encounter significant challenges that can hinder their adoption. Understanding these challenges is crucial for businesses looking to use the full potential of these innovative tools.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;1. Cultural resistance to change&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;One of the biggest hurdles is overcoming ingrained habits and resistance within the organization. Employees used to traditional methods of data analysis might be skeptical about moving to new systems, fearing the learning curve or potential disruptions to their routine workflows. Promoting a culture that values continuous learning and technological adaptability is key to overcoming this resistance.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;2. Complexity of integration&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Integrating new BI technologies with existing IT infrastructure can be complex and costly. Organizations must help ensure that new tools are compatible with their current systems, which often involve significant time and technical expertise. The complexity increases when trying to maintain data consistency and security across multiple platforms.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;
+&lt;h3 class=&quot;wp-block-heading&quot;&gt;3. Data governance and security&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Gen AI, by its nature, creates new content based on existing data sets. The outputs generated by AI can sometimes introduce biases or inaccuracies if not properly monitored and managed.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;With the increased use of AI and machine learning in BI tools, managing data privacy and security becomes more complex. Organizations must help ensure that their data governance policies are robust enough to handle new types of data interactions and comply with regulations such as GDPR. This often requires updating security protocols and continuously monitoring data access and usage.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gartner.com/doc/reprints?id=1-2GEBTI5J&amp;ct=240129&amp;st=sb&quot;&gt;According to Gartner&lt;/a&gt;, by 2025, augmented consumerization functions will drive the adoption of ABI capabilities beyond 50% for the first time, influencing more business processes and decisions.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;As we stand on the brink of this new era in BI, we must focus on adopting new technologies and managing them wisely. By fostering a culture that embraces continuous learning and innovation, organizations can fully harness the potential of gen AI and augmented analytics to make smarter, faster and more informed decisions.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:shortcode --&gt;
+[button link=&quot;https://www.ibm.com/account/reg/us-en/signup?formid=urx-52813&quot;]Read the report[/button] 
+&lt;!-- /wp:shortcode --&gt;"
+      }
+</script>
+
+<!-- BREADCRUMB SCHEMA -->
+<script id="post-schema" type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://securityintelligence.com/"
+            },
+                    ]
+    }
+</script>
+
+<div class="dark_background"  style="background:#f2f4f8;"></div>
+<div class="container grid" style="background:#f2f4f8;">
+      <!-- Breadcrumbs -->
+      
+<aside class="breadcrumbs breadcrumbs--IBM_blog">
+      <h1 class="breadcrumbs__page_title">A new era in BI: Overcoming low adoption to make smart decisions accessible for all</h1>      </aside>
+</div>
+<div class="container grid hero_background hero--IBM_blog">
+      <div class="grid__content post post--IBM_blog">
+            <div class="post__thumbnail">                <amp-img 
+                    alt="Two colleagues looking at an iPad in an office together" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1.jpg" 
+                    srcset="https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1-300x158.jpg 300w,
+                        https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1-630x330.jpg 630w,
+                        https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1-1200x630.jpg 1200w,
+                        https://www.ibm.com/blog/wp-content/uploads/2024/05/d10a2424-60d1-459b-86cb0e2b1fac3262_blog-lead-space-40x21-1.jpg 2400w"
+                >
+                </amp-img>
+                        </div>            <div class="Ibm_new_category">
+            <div class="category-container">
+            
+      <div class="category_ibm">
+                  <div class="title">
+                  <a href="https://www.ibm.com/blog/category/artificial-intelligence/"><span class="name_category">Artificial intelligence<br>
+                                               <a href="https://www.ibm.com/blog/category/analytics/"><span class="name_other_category">Analytics<br>
+                                          
+                  </span></a>
+                  </div>
+                  <hr class="separator">
+                  <div class="author_date">
+                        <div class="information">
+                        <span class="date">May 17, 2024</span>
+                        <span class="author_category">By <a class="bylink"  href="https://www.ibm.com/blog/author/kasun-attanapola/" >Kasun Attanapola</a>
+                        <span class="author_comma"></span><br>
+                                                      <!--== Additional-Authors ==-->
+                              
+                                                                                          
+                                                                                                                  <span class="author_category"><a href="https://www.ibm.com/blog/author/aradhana-iyeribm-com/">Aradhana Iyer</a>
+                                                            <br></span>
+                                                                                                
+                                                                  </span>
+                        <span  class="author_category"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 5</span> <span class="rt-label rt-postfix">min read</span></span></span>
+                        </div>
+                  </div>
+                  <div class="social-container" style="visibility: hidden;">
+                  <hr class="separator">
+                  <div class="social">
+                                          
+                                   <!-- Social ICONS -->
+                              <a href="https://twitter.com/intent/tweet?text=A new era in BI: Overcoming low adoption to make smart decisions accessible for all&url=https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/" target="_blank" rel="noopener noreferrer"><amp-img class="arrow" layout="fixed" height="26" width="26" src="https://www.ibm.com/blog/wp-content/themes/sapphire/images/social-icons/twitter.svg" alt="twitter"></amp-img></a>
+                              <a href="https://www.linkedin.com/shareArticle?url=https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/" target="_blank" rel="noopener noreferrer"><amp-img class="arrow" layout="fixed" height="26" width="26" src="https://www.ibm.com/blog/wp-content/themes/sapphire/images/social-icons/linkedin.svg" alt="Linkedin"></amp-img></a>
+                              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/" target="_blank" rel="noopener noreferrer"><amp-img class="arrow" layout="fixed" height="26" width="26" src="https://www.ibm.com/blog/wp-content/themes/sapphire/images/social-icons/facebook.svg" alt="facebook"></amp-img></a>
+                              <a href="https://www.ibm.com/blog/a-new-era-in-bi-overcoming-low-adoption-to-make-smart-decisions-accessible-for-all/" target="_blank" rel="noopener noreferrer"><amp-img class="arrow" layout="fixed" height="26" width="26" src="https://www.ibm.com/blog/wp-content/themes/sapphire/images/social-icons/link.svg" alt="An arrow pointing up"></amp-img></a>
+
+                                    </div>
+                  </div>
+            </div>
+
+
+      <script>
+            window.addEventListener('scroll', function() {
+            var category = document.querySelector('.category_ibm');
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition >= 0) {
+                  category.classList.add('sticky_ibm');
+            } else {
+                  category.classList.remove('sticky_ibm');
+            }
+            });
+
+                  
+      </script>
+<script>
+      const cookies = JSON.parse(localStorage.getItem("truste.eu.cookie.notice_preferences"));
+      if (cookies && cookies.value === '2:') {
+            document.querySelector('.social-container').style.visibility = 'visible';
+      }
+</script>            </div>
+            <main class="post__content category  " id="post__content">
+                  
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Organizations today are both empowered and overwhelmed by data. This paradox lies at the heart of modern business strategy: while there&rsquo;s an unprecedented amount of data available, unlocking actionable insights requires more than access to numbers.</p>
+
+
+
+<p>The push to enhance productivity, use resources wisely, and boost sustainability through data-driven decision-making is stronger than ever. Yet, the low adoption rates of business intelligence (BI) tools present a significant hurdle.</p>
+
+
+
+<p>According to Gartner, although the number of employees that use analytics and business intelligence (ABI) has increased in 87% of surveyed organizations, ABI is still used by only 29% of employees on average. Despite the clear benefits of BI, <a href="https://www.eckerson.com/articles/new-study-identifies-drivers-of-bi-and-analytics-adoption-in-companies-today" target="_blank" rel="noopener follow" >the percentage of employees actively using ABI tools has seen minimal growth over the past 7 years</a>. So why aren&rsquo;t more people using BI tools?</p>
+
+
+
+<h2 class="wp-block-heading">Understanding the low adoption rate</h2>
+
+
+
+<p>The low adoption rate of traditional BI tools, particularly dashboards, is a multifaceted issue rooted in both the inherent limitations of these tools and the evolving needs of modern businesses. Here&rsquo;s a deeper look into why these challenges might persist and what it means for users across an organization:</p>
+
+
+
+<h3 class="wp-block-heading">1. Complexity and lack of accessibility</h3>
+
+
+
+<ol></ol>
+
+
+
+<p>While excellent for displaying consolidated data views, dashboards often present a steep learning curve. This complexity makes them less accessible to nontechnical users, who might find these tools intimidating or overly complex for their needs. Moreover, the static nature of traditional dashboards means they are not built to adapt quickly to changes in data or business conditions without manual updates or redesigns.</p>
+
+
+
+<h3 class="wp-block-heading">2. Limited scope for actionable insights</h3>
+
+
+
+<p>Dashboards typically provide high-level summaries or snapshots of data, which are useful for quick status checks but often insufficient for making business decisions. They tend to offer limited guidance on what actions to take next, lacking the context needed to derive actionable, decision-ready insights. This can leave decision-makers feeling unsupported, as they need more than just data; they need insights that directly inform action.</p>
+
+
+
+<h3 class="wp-block-heading">3. The &ldquo;unknown unknowns&rdquo;</h3>
+
+
+
+<p>A significant barrier to BI adoption is the challenge of not knowing what questions to ask or what data might be relevant. Dashboards are static and require users to come with specific queries or metrics in mind. Without knowing what to look for, business analysts can miss critical insights, making dashboards less effective for exploratory data analysis and real-time decision-making.</p>
+
+
+
+<h2 class="wp-block-heading">Moving beyond one-size-fits-all: The evolution of dashboards</h2>
+
+
+
+<p>While traditional dashboards have served us well, they are no longer sufficient on their own. The world of BI is shifting toward integrated and personalized tools that understand what each user needs. This isn&rsquo;t just about being user-friendly; it&rsquo;s about making these tools vital parts of daily decision-making processes for everyone, not just for those with technical expertise.</p>
+
+
+
+<p>Emerging technologies such as generative AI (gen AI) are enhancing BI tools with capabilities that were once only available to data professionals. These new tools are more adaptive, providing personalized BI experiences that deliver contextually relevant insights users can trust and act upon immediately. We&rsquo;re moving away from the one-size-fits-all approach of traditional dashboards to more dynamic, customized analytics experiences. These tools are designed to guide users effortlessly from data discovery to actionable decision-making, enhancing their ability to act on insights with confidence.</p>
+
+
+
+<h2 class="wp-block-heading">The future of BI: Making advanced analytics accessible to all</h2>
+
+
+
+<p>As we look toward the future, ease of use and personalization are set to redefine the trajectory of BI.</p>
+
+
+
+<h3 class="wp-block-heading">1. Emphasizing ease of use</h3>
+
+
+
+<ol></ol>
+
+
+
+<p>The new generation of BI tools breaks down the barriers that once made powerful data analytics accessible only to data scientists. With simpler interfaces that include conversational interfaces, these tools make interacting with data as easy as having a chat. This integration into daily workflows means that advanced data analysis can be as straightforward as checking your email. This shift democratizes data access and empowers all team members to derive insights from data, regardless of their technical skills.<br><br>For example, imagine a sales manager who wants to quickly check the latest performance figures before a meeting. Instead of navigating through complex software, they ask the BI tool, &ldquo;What were our total sales last month?&rdquo; or &ldquo;How are we performing compared to the same period last year?&rdquo;</p>
+
+
+
+<p>The system understands the questions and provides accurate answers in seconds, just like a conversation. This ease of use helps to ensure that every team member, not just data experts, can engage with data effectively and make informed decisions swiftly.</p>
+
+
+
+<h3 class="wp-block-heading">2. Driving personalization</h3>
+
+
+
+<p>Personalization is transforming how BI platforms present and interact with data. It means that the system learns from how users work with it, adapting to suit individual preferences and meeting the specific needs of their business.</p>
+
+
+
+<p>For example, a dashboard might display the most important metrics for a marketing manager differently than for a production supervisor. It&rsquo;s not just about the user&rsquo;s role; it&rsquo;s also about what&rsquo;s happening in the market and what historical data shows.</p>
+
+
+
+<p>Alerts in these systems are also smarter. Rather than notifying users about all changes, the systems focus on the most critical changes based on past importance. These alerts can even adapt when business conditions change, helping to ensure that users get the most relevant information without having to look for it themselves.</p>
+
+
+
+<p>By integrating a deep understanding of both the user and their business environment, BI tools can offer insights that are exactly what&rsquo;s needed at the right time. This makes these tools incredibly effective for making informed decisions quickly and confidently.</p>
+
+
+
+<h2 class="wp-block-heading">Navigating the future: Overcoming adoption challenges</h2>
+
+
+
+<p>While the advantages of integrating advanced BI technologies are clear, organizations often encounter significant challenges that can hinder their adoption. Understanding these challenges is crucial for businesses looking to use the full potential of these innovative tools.</p>
+
+
+
+<h3 class="wp-block-heading">1. Cultural resistance to change</h3>
+
+
+
+<p>One of the biggest hurdles is overcoming ingrained habits and resistance within the organization. Employees used to traditional methods of data analysis might be skeptical about moving to new systems, fearing the learning curve or potential disruptions to their routine workflows. Promoting a culture that values continuous learning and technological adaptability is key to overcoming this resistance.</p>
+
+
+
+<h3 class="wp-block-heading">2. Complexity of integration</h3>
+
+
+
+<p>Integrating new BI technologies with existing IT infrastructure can be complex and costly. Organizations must help ensure that new tools are compatible with their current systems, which often involve significant time and technical expertise. The complexity increases when trying to maintain data consistency and security across multiple platforms.</p>
+
+
+
+<h3 class="wp-block-heading">3. Data governance and security</h3>
+
+
+
+<p>Gen AI, by its nature, creates new content based on existing data sets. The outputs generated by AI can sometimes introduce biases or inaccuracies if not properly monitored and managed.</p>
+
+
+
+<p>With the increased use of AI and machine learning in BI tools, managing data privacy and security becomes more complex. Organizations must help ensure that their data governance policies are robust enough to handle new types of data interactions and comply with regulations such as GDPR. This often requires updating security protocols and continuously monitoring data access and usage.</p>
+
+
+
+<p><a href="https://www.gartner.com/doc/reprints?id=1-2GEBTI5J&amp;ct=240129&amp;st=sb" target="_blank" rel="noopener follow" >According to Gartner</a>, by 2025, augmented consumerization functions will drive the adoption of ABI capabilities beyond 50% for the first time, influencing more business processes and decisions.</p>
+
+
+
+<p>As we stand on the brink of this new era in BI, we must focus on adopting new technologies and managing them wisely. By fostering a culture that embraces continuous learning and innovation, organizations can fully harness the potential of gen AI and augmented analytics to make smarter, faster and more informed decisions.</p>
+
+
+<a class="btn  small" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-52813" >Read the report</a>
+<div id="was-this-helpful" data-post-id="461012" data-thank-text="Thanks for your feedback!"><div id="wthf-title">Was this article helpful?</div><div id="wthf-yes-no"><span data-value="1">Yes</span><span data-value="0">No</span></div></div><script type="text/javascript"  src="/fz0g3VAnt/dKcRw0Rjc/Zs7na-w/4s/QO9NLbzDrXhE9G/Y3k_BgQSaQo/ekQ1/OVM-KCA"></script><link rel="stylesheet" type="text/css"  href="/_sec/cp_challenge/sec-4-4.css">
+                                        <script  src="/_sec/cp_challenge/sec-cpt-4-4.js" async defer></script>
+                                        <div id="sec-overlay" style="display:none;">
+                                        <div id="sec-container">
+                                        </div>
+                                      </div></body></html>
+<div id="nc_pixel"></div><div class="post__tags">
+    <h3 style="text-transform: capitalize; font-family: IBM Plex Sans, sans-serif; font-size: 18px; font-weight: 600;">Tags</h3>    <a href="https://www.ibm.com/blog/tag/business-intelligence/" rel="tag">Business Intelligence</a></div>
+
+
+<div class="post__author author  ">
+      <div class="author__box">
+            <div class="author__photo" style="background-image:  url(https://www.ibm.com/blog/wp-content/uploads/2021/04/Kasun.Attanapola.jpg);"></div>
+            <div class="author__infos">
+
+                  <div class="author__name"><a href="https://www.ibm.com/blog/author/kasun-attanapola/" >Kasun Attanapola</a></div>
+                  <div class="author__role">Principal Product Manager</div>
+            </div>
+      </div>
+
+
+                    
+                                                    
+                                          <div class="author__box">
+                        <div class="author__photo" style="background-image:  url(https://www.ibm.com/blog/wp-content/uploads/2023/08/Aradhana-Iyer.jpg);"></div>
+                        <div class="author__infos">
+                              <div class="author__name"><a href="https://www.ibm.com/blog/author/aradhana-iyeribm-com/">Aradhana Iyer</a></div>
+                              <div class="author__role">Marketing Leader, Business Analytics, IBM Data & AI</div>
+                        </div>
+                  </div>
+                                          
+      </div>
+<!-- CONTINUE READING -->
+             </main>
+            </div>
+
+            
+      </div>
+
+      
+<aside class="grid__sidebar post__sidebar post__sidebar--IBM_blog">
+      <div class="mobile_divider"></div>
+      <header class="post__sidebar__header">Trending</header>
+
+
+      <!-- ARTICLES  -->
+      
+      <article class="article article_grid article__mobile--card  article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/redefining-clinical-trials-adopting-ai-for-speed-volume-and-diversity/" aria-label="Redefining clinical trials: Adopting AI for speed, volume and diversity">
+                  <div class="article__img">                <amp-img 
+                    alt="Pharmacist looking at tablet while reaching for medicine" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2024/05/pi-2066132_blog-lead-space-40x21-1-630x330.jpg"
+                >
+                </amp-img>
+                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                  <!-- CAT -->
+                                                                  <a class="article__category_link" href="https://www.ibm.com/blog/category/artificial-intelligence/" aria-label="https://www.ibm.com/blog/category/artificial-intelligence/">
+                              Artificial intelligence  
+                        </a>
+
+                                    <!-- DATE  -->
+                  <span class="article__date">
+                        May 6, 2024                  </span>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/redefining-clinical-trials-adopting-ai-for-speed-volume-and-diversity/" class="article__content_link" aria-label="Redefining clinical trials: Adopting AI for speed, volume and diversity">
+                        <h2 class="article__title">Redefining clinical trials: Adopting AI for speed, volume and diversity</h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                              <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 8</span> <span class="rt-label rt-postfix">min read</span></span> - </span>By using AI in your talent acquisition process, you can reduce time-to-hire, improve candidate quality, and increase inclusion and diversity.                        </p>
+                  </a>
+            </div>
+      </article>
+
+      <article class="article article_grid article__mobile--card  article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/revolutionize-your-talent-acquisition-strategy-how-ai-can-help-you-find-the-right-candidates-faster/" aria-label="Revolutionize your talent acquisition strategy: How AI can help you find the right candidates faster">
+                  <div class="article__img">                <amp-img 
+                    alt="Female candidate giving interview with HR manager at office" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2024/05/0a9d034f2faa249d-630x330.jpg"
+                >
+                </amp-img>
+                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                  <!-- CAT -->
+                                                                  <a class="article__category_link" href="https://www.ibm.com/blog/category/artificial-intelligence/" aria-label="https://www.ibm.com/blog/category/artificial-intelligence/">
+                              Artificial intelligence  
+                        </a>
+
+                                    <!-- DATE  -->
+                  <span class="article__date">
+                        May 7, 2024                  </span>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/revolutionize-your-talent-acquisition-strategy-how-ai-can-help-you-find-the-right-candidates-faster/" class="article__content_link" aria-label="Revolutionize your talent acquisition strategy: How AI can help you find the right candidates faster">
+                        <h2 class="article__title">Revolutionize your talent acquisition strategy: How AI can help you find the right candidates faster</h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                              <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 2</span> <span class="rt-label rt-postfix">min read</span></span> - </span>Our leading artificial intelligence (AI) solution is designed to help you find the right candidates faster and more efficiently.                        </p>
+                  </a>
+            </div>
+      </article>
+
+      <article class="article article_grid article__mobile--card  article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/enterprises-best-bet-for-the-future-securing-generative-ai/" aria-label="Enterprises’ best bet for the future: Securing generative AI  ">
+                  <div class="article__img">                <amp-img 
+                    alt="Modern office space and team meeting" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2024/04/ibm_sustainability_strategy_01d_blog-lead-space-2x1-1-630x330.jpg"
+                >
+                </amp-img>
+                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                  <!-- CAT -->
+                                                                  <a class="article__category_link" href="https://www.ibm.com/blog/category/security/" aria-label="https://www.ibm.com/blog/category/security/">
+                              Security  
+                        </a>
+
+                                    <!-- DATE  -->
+                  <span class="article__date">
+                        May 6, 2024                  </span>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/enterprises-best-bet-for-the-future-securing-generative-ai/" class="article__content_link" aria-label="Enterprises’ best bet for the future: Securing generative AI  ">
+                        <h2 class="article__title">Enterprises’ best bet for the future: Securing generative AI  </h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                              <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 4</span> <span class="rt-label rt-postfix">min read</span></span> - </span>As AI transforms and redefines how businesses operate and how customers interact with them, trust in technology must be built.                          </p>
+                  </a>
+            </div>
+      </article>
+
+      <!-- ADVERTISEMENT -->
+      
+            <div class="billboard_wrapper">
+                  <a href="https://www.ibm.com/account/reg/us-en/signup?formid=news-urx-52120 " aria-label="A custom SPONSORED flag ">
+                        <amp-img layout='responsive' widht='300' height='250' src="https://www.ibm.com/blog/wp-content/uploads/2024/04/AI_300x600.jpg" alt="">
+                        </amp-img>
+                  </a>
+            </div>
+      
+</aside>
+</div>
+<script>
+      const kaltura = document.querySelectorAll("[data-widget=\"videoplayer\"]")
+      if (kaltura != null) {
+            kaltura.forEach(function(item){
+                  const kId = item.id + '--' + item.dataset.videoid;
+                  document.getElementById(item.id).id = kId;
+                  getKalturaVideo(item);
+            })
+      }
+      
+</script>
+
+<div class="card_container_background  card_container--IBM_blog">
+    <section class="container cards cards--IBM_blog">
+        <h3>More from Artificial intelligence</h3>
+        <div class="cards__wrapper">
+            
+<article class="article article--card cards__article_grid   article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/announcement/watsonx-bi-assistant/">
+                <div class="article__img">
+                                    <amp-img 
+                    alt="Person with glasses at desk with one hand on laptop and other on phone, looking at phone and smiling" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2024/05/gettyimages-1270333473_blog-lead-space-40x21-1-630x330.jpg"
+                >
+                </amp-img>
+                                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                <!-- CAT AND DATE -->
+                <div class="article__eyebrow">
+                                        <span class="article__date">
+                        May 21, 2024                    </span>
+                </div>
+                <!-- TITLE & EXCERPT -->
+                <a href="https://www.ibm.com/blog/announcement/watsonx-bi-assistant/" class="article__content_link">
+                    <div class="article__direction">
+                        <h2 class="article__title">
+                            In preview now: IBM watsonx BI Assistant is your AI-powered business analyst and advisor                        </h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                            <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 3</span> <span class="rt-label rt-postfix">min read</span></span> - </span>The business intelligence (BI) software market is projected to surge to USD 27.9 billion by 2027, yet only 30% of employees use these tools for decision-making. This gap between investment and usage highlights a significant missed opportunity. The primary hurdle in adopting BI tools is their complexity. Traditional BI tools, while powerful, are often too complex and slow for effective decision-making. Business decision-makers need insights tailored to their specific business contexts, not complex dashboards that are difficult to navigate. Organizations&hellip;                        </p>
+                    </div>
+                </a>
+            </div>
+        </article>
+      
+<article class="article article--card cards__article_grid   article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/announcement/watsonx-on-microsoft-azure/">
+                <div class="article__img">
+                                    <amp-img 
+                    alt="Businesswomen discussing project on digital tablet" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2024/05/135d8281-4b5d-4485-b9dc-873ab1a4a766_blog-lead-space-40x21-2-630x330.jpg"
+                >
+                </amp-img>
+                                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                <!-- CAT AND DATE -->
+                <div class="article__eyebrow">
+                                        <span class="article__date">
+                        May 21, 2024                    </span>
+                </div>
+                <!-- TITLE & EXCERPT -->
+                <a href="https://www.ibm.com/blog/announcement/watsonx-on-microsoft-azure/" class="article__content_link">
+                    <div class="article__direction">
+                        <h2 class="article__title">
+                            Introducing watsonx platform on Microsoft Azure                        </h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                            <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 4</span> <span class="rt-label rt-postfix">min read</span></span> - </span>Artificial intelligence (AI) is revolutionizing industries by enabling advanced analytics, automation, and personalized experiences According to The business value of AI, from the IBM Institute of Business Value, AI adoption has more than doubled since 2017. Enterprises are taking an intentional design approach to hybrid cloud and AI to drive technology decisions and enable adoption of Generative AI. According to the McKinsey report,&nbsp; The economic potential of generative AI: The next productivity frontier, generative AI is projected to add $2.6&hellip;                        </p>
+                    </div>
+                </a>
+            </div>
+        </article>
+      
+<article class="article article--card cards__article_grid   article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/announcement/democratizing-large-language-model-development-with-instructlab-support-in-watsonx-ai/">
+                <div class="article__img">
+                                    <amp-img 
+                    alt="Three coworkers, two sitting and one standing, talking in front of a window." 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2024/05/Democratizing-Large-Language-Model-630x330.jpg"
+                >
+                </amp-img>
+                                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                <!-- CAT AND DATE -->
+                <div class="article__eyebrow">
+                                        <span class="article__date">
+                        May 21, 2024                    </span>
+                </div>
+                <!-- TITLE & EXCERPT -->
+                <a href="https://www.ibm.com/blog/announcement/democratizing-large-language-model-development-with-instructlab-support-in-watsonx-ai/" class="article__content_link">
+                    <div class="article__direction">
+                        <h2 class="article__title">
+                            Democratizing Large Language Model development with InstructLab support in watsonx.ai                        </h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                            <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 5</span> <span class="rt-label rt-postfix">min read</span></span> - </span>There is no doubt that generative AI is changing the game for many industries around the world due to its ability to automate and enhance creative and analytical processes. According to McKinsey, generative AI has a potential to add $4 trillion to the global economy. With the advent of generative AI and, more specifically, Large Language Models (LLMs), driving tremendous opportunities and efficiencies, we’re finding that the path to success for organizations to effectively use and scale their generative AI&hellip;                        </p>
+                    </div>
+                </a>
+            </div>
+        </article>
+              </div>
+    </section>
+</div>
+      <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/v1.31.0-rc.0/cta-section.min.js"></script>
+      <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/cta-section.min.js"></script>
+      <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/next/cta-section.min.js"></script>
+      <div style="background-color: #161616;">
+      <dds-cta-section data-autoid="dds--cta-section" children-custom-class="">
+                  <dds-cta-block no-border="" data-autoid="dds--cta-block">
+                        <dds-content-block-heading class="copy" role="heading" aria-level="2" data-autoid="dds--content-block__heading" slot="heading">
+                        <h2 >IBM Newsletters</h2>
+                        </dds-content-block-heading>
+                        
+                              <dds-content-block-copy data-autoid="dds--content-block__copy" size="md" slot="copy">
+                                    <dds-content-block-paragraph data-autoid="dds--content-block-paragraph" class="copy">
+                                    Get our newsletters and topic updates that deliver the latest thought leadership and insights on emerging trends.
+                                    </dds-content-block-paragraph>
+                                    <div role="list" class="list_newletter">
+                                          <dds-button-cta data-autoid="dds-cta" cta-style="button" class="copy" cta-type="local" href="https://www.ibm.com/account/reg/signup?formid=news-urx-51525" kind="primary" icon-layout="" size="">
+                                                Subscribe now
+                                          </dds-button-cta>
+                                          <dds-button-cta data-autoid="dds-cta" class="button2" cta-style="button" cta-type="local" href="https://www.ibm.com/subscribe" kind="tertiary" icon-layout="" size="">
+                                                More newsletters
+                                          </dds-button-cta>
+                                    </div>
+                              </dds-content-block-copy>    
+                  </dds-cta-block>
+            </dds-cta-section>
+      </div>
+            
+      <dds-footer-container></dds-footer-container>
+      <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const boxstyle = document.querySelector('.button2');
+            
+            if (boxstyle) {
+                  const shadowRoot = boxstyle.shadowRoot;
+                  const bxContentSsectionDOM = shadowRoot.querySelector('.bx--btn');
+			 if (bxContentSsectionDOM) {
+                        console.log(bxContentSsectionDOM);
+                        bxContentSsectionDOM.style.color = 'white'; 
+                        bxContentSsectionDOM.style.borderColor = 'white'; 
+                        bxContentSsectionDOM.addEventListener('mouseover', () => {
+                        bxContentSsectionDOM.style.color = 'white';
+                        bxContentSsectionDOM.style.borderColor = 'white';
+                        bxContentSsectionDOM.style.backgroundColor = 'rgba(141, 141, 141, 0.16)'; //
+                        
+                        });
+
+                        // when mouse leave the element
+                        bxContentSsectionDOM.addEventListener('mouseout', () => {
+                        bxContentSsectionDOM.style.color = 'white';
+                        bxContentSsectionDOM.style.borderColor = 'white';
+                        bxContentSsectionDOM.style.backgroundColor = 'transparent'; // Reset background color
+                        });
+		      }
+            
+            }
+            });
+
+            document.querySelector("dds-footer-container").size = 'default';
+
+            //Uncomment this to add a custom links.
+            // document.querySelector("dds-footer-container").adjunctLinks = [{
+            //             'title': 'IBM Custom Link',
+            //             'link': 'https://ibm.com'
+            //       },
+            //       {
+            //             'title': 'IBM Custom Link2',
+            //             'link': 'https://ibm.com'
+            //       }
+            // ];
+      </script>
+
+
+<script>
+      </script>
+
+
+<!-- FOOTER SCRIPTS -->
+<script type="text/javascript" id="qppr_frontend_scripts-js-extra">
+/* <![CDATA[ */
+var qpprFrontData = {"linkData":{"https:\/\/www.ibm.com\/blog\/ai-governance-break-open-the-black-box\/":[0,0,""],"https:\/\/www.ibm.com\/blog\/find-and-develop-the-right-employees-with-ai-in-recruiting\/":[0,0,""],"https:\/\/www.ibm.com\/blog\/how-to-create-ibm-cloud-direct-link-connect-20-with-megaport\/":[0,0,""],"https:\/\/www.ibm.com\/blog\/exxonmobil-ibm-cloud-exxon-mobil-rewards\/":[0,0,""],"https:\/\/www.ibm.com\/blog\/ibm-cloud-secure-gateway-deprecation\/":[0,0,""],"https:\/\/www.ibm.com\/blog\/?p=443399":[0,0,""],"https:\/\/www.ibm.com\/blog\/?p=443316":[0,0,""],"https:\/\/www.ibm.com\/blog\/?p=451346":[0,0,""]},"siteURL":"https:\/\/www.ibm.com\/blog","siteURLq":"https:\/\/www.ibm.com"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.ibm.com/blog/wp-content/plugins/quick-pagepost-redirect-plugin/js/qppr_frontend_script.min.js?ver=5.2.4" id="qppr_frontend_scripts-js"></script>
+<script type="text/javascript" id="wthf-script-js-before">
+/* <![CDATA[ */
+var nonce_wthf = "fa26214820";var ajaxurl = "https://www.ibm.com/blog/wp-admin/admin-ajax.php";
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.ibm.com/blog/wp-content/plugins/was-this-article-helpful/js/script.js?ver=1.0" id="wthf-script-js"></script>
+
+</body>
+
+</html>
