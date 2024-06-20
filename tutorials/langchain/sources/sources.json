@@ -23,8 +23,7 @@
     "./corpus/code_assistant_for_orchestrate.html": "https://www.ibm.com/blog/announcement/watsonx-orchestrate-ai-z-assistant/",
     "./corpus/accelerating_gen_ai.html": "https://newsroom.ibm.com/Blog-How-IBM-Cloud-is-Accelerating-Business-Outcomes-with-Gen-AI",
     "./corpus/watsonx_open_source.html": "https://newsroom.ibm.com/2024-05-21-IBM-Unveils-Next-Chapter-of-watsonx-with-Open-Source,-Product-Ecosystem-Innovations-to-Drive-Enterprise-AI-at-Scale",
-    "./corpus/announcements.txt": "Think 2024 Announcements",
-    "./corpus/ibm_concert.txt": "IBM Concert",
+    "./corpus/ibm_concert.html": "https://www.ibm.com/products/concert",
     "./corpus/ibm_consulting_advantage_news.html": "https://newsroom.ibm.com/2024-01-17-IBM-Introduces-IBM-Consulting-Advantage,-an-AI-Services-Platform-and-Library-of-Assistants-to-Empower-Consultants",
     "./corpus/ibm_consulting_advantage_info.html": "https://www.ibm.com/consulting/info/ibm-consulting-advantage"
 }
